@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <div id="radio-container"></div>
+    <button id="check-selected">Check Selected</button>
+    
+    <script>
+        // Array of radio button options
+        const options = ['Option 1', 'Option 2', 'Option 3'];
+    
+        // Container to hold the radio buttons
+        const container = document.getElementById('radio-container');
+    
+        // Store the currently selected radio
+        let lastChecked = null;
+    
+        // Dynamically create radio buttons and labels
+        options.forEach((option, index) => {
+            // Create radio input
+            const radio = document.createElement('input');
+            radio.type = 'radio';
+            radio.id = `option${index + 1}`;
+            radio.name = 'group1';
+            radio.value = option;
+    
+            // Add event listener for toggling
+            radio.addEventListener('click', function () {
+                if (lastChecked === this) {
+                    this.checked = false; // Uncheck if it's already checked
+                    lastChecked = null;  // Reset the last checked
+                } else {
+                    lastChecked = this; // Update the last checked
+                }
+            });
+    
+            // Create label for the radio button
+            const label = document.createElement('label');
+            label.htmlFor = `option${index + 1}`;
+            label.textContent = option;
+    
+            // Append the radio button and label to the container
+            container.appendChild(radio);
+            container.appendChild(label);
+        });
+    
+        // Function to determine which option is selected
+        function getSelectedOption() {
+            const radios = document.querySelectorAll('input[name="group1"]');
+            for (const radio of radios) {
+                if (radio.checked) {
+                    return radio.value; // Return the value of the selected radio button
+                }
+            }
+            return "No option selected"; // If no radio is checked
+        }
+    
+        // Event listener for the button
+        document.getElementById('check-selected').addEventListener('click', () => {
+            const selectedOption = getSelectedOption();
+            console.log(selectedOption); // Log the selected option to the console
+        });
+    </script>
+</html>
