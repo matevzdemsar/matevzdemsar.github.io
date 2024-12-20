@@ -20,6 +20,6 @@ jobs:
 
     - name: Mirror Source Repository
       run: |
-        git clone --bare https://github.com/matevzdemsar/DnD.git DnD
-        cd DnD
+        # git clone --bare https://github.com/matevzdemsar/DnD.git DnD
+        # cd DnD
         git push --mirror https://${{ secrets.GH_PAT }}@github.com/matevzdemsar/matevzdemsar.github.io.git
