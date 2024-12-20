@@ -15,11 +15,11 @@ jobs:
       uses: actions/checkout@v3
       with:
         repository: matevzdemsar/matevzdemsar.github.io # Replace with your GitHub Pages repo
-        token: ${{ secrets.GITHUB_TOKEN }}
+        token: ${{ secrets.GH_PAT }}
         ref: master # Replace with the branch of your Pages repo
 
     - name: Mirror Source Repository
       run: |
-        git clone --bare https://github.com/matevzdemsar/DnD.git DnD
+        git clone --bare https://GH_PAT@github.com/matevzdemsar/DnD.git DnD
         cd DnD
-        git push --mirror https://github.com/matevzdemsar/matevzdemsar.github.io.git
+        git push --mirror https://GH_PAT@github.com/matevzdemsar/matevzdemsar.github.io.git
