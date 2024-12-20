@@ -76,8 +76,6 @@ function displaySpells() {
   });
 }
 
-const display = displaySpells;
-
-createFilterBox(filterOptions, filterChoice, display);
+createFilterBox(filterOptions, filterChoice, displaySpells);
 display();
 
