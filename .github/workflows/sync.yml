@@ -1,0 +1,25 @@
+name: Sync Source Repository
+
+on:
+  workflow_dispatch: # Allows manual triggering of the workflow
+  push:
+    branches:
+      - master # Runs when the main branch is updated
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Target Repository
+      uses: actions/checkout@v3
+      with:
+        repository: matevzdemsar/matevzdemsar.github.io # Replace with your GitHub Pages repo
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ref: master # Replace with the branch of your Pages repo
+
+    - name: Mirror Source Repository
+      run: |
+        git clone --bare https://github.com/matevzdemsar/DnD.git DnD
+        cd DnD
+        git push --mirror https://github.com/matevzdemsar/matevzdemsar.github.io.git
