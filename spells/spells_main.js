@@ -77,5 +77,5 @@ function displaySpells() {
 }
 
 createFilterBox(filterOptions, filterChoice, displaySpells);
-display();
+displaySpells();
 
