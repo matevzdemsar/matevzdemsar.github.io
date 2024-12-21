@@ -162,7 +162,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
           filterChoice[filter.index] = "";
           display();
         }})
-      
+
       searchBar.addEventListener('input', () => {
         filterChoice['name'] = event.target.value;
         display();
