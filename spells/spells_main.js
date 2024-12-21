@@ -1,5 +1,5 @@
 import { spellFilter } from './spellFilter.js';
-import { showPopup, hidePopup, closeAllPopups, createFilterBox } from '../motherfunctions.js';
+import { showPopup, hidePopup, createFilterBox } from '../motherfunctions.js';
 
 const spells = await fetch('./spells.json')
   .then((response) => {
@@ -52,22 +52,22 @@ function displaySpells() {
     const popup = document.createElement('div');
     popup.id = `popup-${index}`;
     popup.className = 'popup';
-    popup.style.display = 'none'; // Start as hidden
-    popup.style.position = 'fixed'; // Stay fixed in one place
-    popup.style.top = '50%'; // Center vertically
-    popup.style.left = '50%'; // Center horizontally
-    popup.style.transform = 'translate(-50%, -50%)'; // Center alignment
-    popup.style.border = '1px solid black'; // Add a border for visibility
-    popup.style.padding = '20px'; // Add spacing
-    popup.style.backgroundColor = 'white'; // Make it stand out
-    popup.style.zIndex = '1000'; // Ensure it appears above other elements
+    popup.style.display = 'none';
+    popup.style.position = 'fixed';
+    popup.style.top = '50%';
+    popup.style.left = '50%';
+    popup.style.transform = 'translate(-50%, -50%)';
+    popup.style.border = '1px solid black';
+    popup.style.padding = '20px';
+    popup.style.backgroundColor = 'white';
+    popup.style.zIndex = '1000';
 
     const description = spell.desc.join(' ')
 
     popup.innerHTML = `
     <p>${description}</p>
     <button id="close-${index}">Close</button>
-    `;
+    `;                // Add things like spell level, classes etc. to this.
 
     const closeButton = popup.querySelector(`#close-${index}`);
     closeButton.addEventListener('click', () => hidePopup(index));
