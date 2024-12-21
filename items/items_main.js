@@ -10,3 +10,14 @@ const items = await fetch('./items.json')
   })
 
 const filterChoice = {}
+
+function displayItems() {
+  container.innerHTML = '';
+  document.querySelectorAll('.popup').forEach(popup => popup.remove());
+  const filteredItems = spellFilter(items, filterChoice);
+
+  filteredSpells.forEach((item) => {
+    const div = document.createElement('div');
+    div.textContent = item.name;
+  })
+}
