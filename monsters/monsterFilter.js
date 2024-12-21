@@ -63,7 +63,7 @@ function monsterFilter (
 return monsters
         .filter((m) => !name || m.index.includes(name.toLowerCase().replace("-", " ")))
         && !type || (m.type === type)
-        && (!challenge_rating || challenge_rating.includes(m.crhallenge_rating))
+        && (!challenge_rating || challenge_rating.includes(m.challenge_rating))
         && (!armor_class || operatorChoice(m.armor_class, armor_class.value, armor_class.operation))
         && (!hit_points || operatorChoice(m.hit_points, hit_points.value, hit_points.operation))
         && (Object.keys().every(key =>
