@@ -1,4 +1,4 @@
-import { operatorChoice } from "../motherfunctions";
+import { operatorChoice } from "../motherfunctions.js";
 
 /**
  *
@@ -15,9 +15,9 @@ import { operatorChoice } from "../motherfunctions";
  */
 
 
-export function itemFilter ({
+export function itemFilter (
     items,
-    name = false,
+    {name = "",
     type = false,
     rarity = false,
     ammunition = false,
@@ -25,11 +25,11 @@ export function itemFilter ({
     price = {value: 0, operation: ''},
     weight = {value: 0, operation: ''}} = {}) {
         return items
-            .filter((i) => i.index.includes(name.toLowerCase().replace("-", " ")))
-            && (!type || type.includes(equipment_category.index))
-            && (!rarity || rarity.includes(i.rarity))
+            .filter((i) => i.index.includes(name.toLowerCase().replace("-", " "))
+            && (!type.length || type.includes(i.equipment_category.name))
+            && (!rarity.length || rarity.includes(i.rarity))
             && (!ammunition || (i.ammunition === ammunition))
             && (!magic || (i.magic === magic))
             && (operatorChoice(i.weight, weight.value, weight.operation))
-            && (operatorChoice(i.price, price.value, price.operation));
+            && (operatorChoice(i.price, price.value, price.operation)));
 }

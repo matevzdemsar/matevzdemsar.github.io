@@ -11,7 +11,12 @@ const items = await fetch('./items.json')
 
 const filterChoice = {}
 
-const filterOptions = [];
+const filterOptions = [
+  {title: 'Name', index: 'name', type: 'search'},
+  {title: 'Type', index: 'type', type: 'checkbox', options: ['Adventuring Gear',
+    'Tools', 'Mounts and Vehicles', 'Weapon', 'Armor']},
+  
+];
 
 function displayItems() {
   container.innerHTML = '';
@@ -21,7 +26,9 @@ function displayItems() {
   filteredItems.forEach((item) => {
     const div = document.createElement('div');
     div.textContent = item.name;
+    container.appendChild(div)
   })
 }
 
+createFilterBox(filterOptions, filterChoice, displayItems);
 displayItems();
