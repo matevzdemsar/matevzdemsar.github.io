@@ -192,6 +192,11 @@ export function createFilterBox(filterOptions, filterChoice, display) {
               optionsBox.style.gap = '10px';
             } else {
               optionsBox.style.display = 'none';
+              optionsBox.querySelectorAll('input').forEach((i) => {
+              i.checked = false;
+              })
+              filterChoice[filter.index] = false;
+              display();
             }
     
           option.addEventListener('click', function () {
