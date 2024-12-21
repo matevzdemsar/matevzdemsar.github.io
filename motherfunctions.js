@@ -123,10 +123,9 @@ export function createFilterBox(filterOptions, filterChoice, display) {
             optionsBox.style.display = 'none';
             optionsBox.querySelectorAll('input').forEach((i) => {
               i.checked = false;
-              filterChoice[filter.index] = false;
-              console.log(filterChoice)
-              display();
             })
+            filterChoice[filter.index] = false;
+            display();
           }
   
         option.addEventListener('change', () => {
