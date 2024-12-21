@@ -15,7 +15,7 @@ import { operatorChoice } from "../motherfunctions";
  */
 
 
-function itemFilter ({
+export function itemFilter ({
     items,
     name = false,
     type = false,
