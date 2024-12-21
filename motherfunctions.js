@@ -98,6 +98,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     // the options that get displayed if the checkbox is checked
     const optionsBox = document.createElement('div');
     div.appendChild(optionsBox)
+    optionsBox.style.display = 'none'
   
     if(filter.type === 'checkbox') {
   
@@ -150,8 +151,17 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     } else if (filter.type === 'search') {
       const searchBar = document.createElement('input');
       searchBar.type = 'search'
+
       checkbox.addEventListener('change', () => {
         optionsBox.style.display = checkbox.checked ? 'block' : 'none';
+        if (checkbox.checked) {
+          optionsBox.style.display = 'block';
+        } else {
+          optionsBox.style.display = 'none';
+          optionsBox.querySelector('input').value = ""
+          filterChoice[filter.index] = "";
+          display();
+        }})
       
       searchBar.addEventListener('input', () => {
         filterChoice['name'] = event.target.value;
@@ -159,7 +169,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       })
   
       optionsBox.appendChild(searchBar);
-      })
+    
     } else if (filter.type === 'radio') {
   
       let lastChecked = false;
