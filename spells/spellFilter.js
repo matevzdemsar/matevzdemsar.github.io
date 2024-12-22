@@ -28,7 +28,6 @@ export function spellFilter (
     duration = false,
     concentration = false,
     ritual = false } = {}) {
-        console.log(components);
         return spells.filter((s) =>
             s.index.replace("-", " ").includes(name.toLowerCase())
             &&  (!pclass.length || pclass.some((pc) => s.classes.map((c) => c.name).includes(pc))) // To ni v redu, ker so classi ključi v objectu.

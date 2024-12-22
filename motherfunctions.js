@@ -79,29 +79,27 @@ export function hidePopup(index) {
 export function createFilterBox(filterOptions, filterChoice, display) {
 
   const filterBox = document.getElementById("filterBox");
-  
+
   filterOptions.forEach((filter, index) => {
     const div = document.createElement('div');
-  
+
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = `checkbox-${index}`;
     checkbox.name = filter.title;
-  
+
     div.appendChild(checkbox);
-  
+
     const filterLabel = document.createElement('label');
     filterLabel.textContent = filter.title;
     filterLabel.htmlFor = `checkbox-${index}`;
     div.appendChild(filterLabel);
-  
+
     // the options that get displayed if the checkbox is checked
     const optionsBox = document.createElement('div');
-    div.appendChild(optionsBox)
-    optionsBox.style.display = 'none'
-  
+
     if(filter.type === 'checkbox') {
-  
+
       const checkboxStates = [];
 
       checkbox.addEventListener('change', () => {
@@ -116,23 +114,21 @@ export function createFilterBox(filterOptions, filterChoice, display) {
           })
           checkboxStates.length = 0;
           filterChoice[filter.index] = false;
-          console.log(checkboxStates);
           display();
         }
       })
-  
+
       filter.options.forEach((o, subIndex) => {
-        
+
         const option = document.createElement('input');
         option.type = 'checkbox';
         option.id = `option-${index}-${subIndex}`;
         option.name = filter.title;
-        console.log(option.id)
-        
+
         const optionLabel = document.createElement('label');
         optionLabel.htmlFor = `option-${index}-${subIndex}`;
         optionLabel.textContent = o;
-  
+
         option.addEventListener('change', () => {
             if(option.checked) {
               checkboxStates.push(o);
@@ -151,7 +147,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
           optionsBox.appendChild(optionLabel);
 
       })
-  
+
     } else if (filter.type === 'search') {
       const searchBar = document.createElement('input');
       searchBar.type = 'search'
@@ -171,24 +167,24 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         filterChoice['name'] = event.target.value;
         display();
       })
-  
+
       optionsBox.appendChild(searchBar);
-    
+
     } else if (filter.type === 'radio') {
-  
+
       let lastChecked = false;
-  
+
       filter.options.forEach((o, subIndex) => {
-        
+
           const option = document.createElement('input');
           option.type = 'radio';
           option.id = `option-${index}-${subIndex}`;
           option.name = filter.title;
-          
+
           const optionLabel = document.createElement('label');
           optionLabel.htmlFor = `option-${index}-${subIndex}`;
           optionLabel.textContent = o;
-    
+
           checkbox.addEventListener('change', () => {
             if(checkbox.checked) {
               optionsBox.style.display = 'block';
@@ -202,7 +198,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
               filterChoice[filter.index] = false;
               display();
             }
-    
+
           option.addEventListener('click', function () {
               if(lastChecked === o) {
                   this.checked = false;
@@ -210,17 +206,35 @@ export function createFilterBox(filterOptions, filterChoice, display) {
               } else {
                   lastChecked = o;
               }
-  
+
               filterChoice[filter.index] = lastChecked;
               display();
-  
+
             });
     
           optionsBox.appendChild(option);
           optionsBox.appendChild(optionLabel);
           })
         })
-    } // else if {}     - do this for other input types as well.
+    } else if (filter.type === 'operator') {
+      filter.options.forEach((o, subIndex) => {
+
+        const option = document.createElement('div');
+        option.id = `option-${index}-${subIndex}`;
+        option.name = filter.title
+
+        const optionLabel = document.createElement('label');
+        optionLabel.htmlFor(`option-${index}-${subIndex}`)
+        // option.textContent = (add when you determine the structure of operator-type inputs)
+        
+
+        optionsBox.appendChild(option);
+        optionsBox.appendChild(optionLabel);
+
+      })
+    }
+    div.appendChild(optionsBox)
+    optionsBox.style.display = 'none'
     filterBox.appendChild(div);
   });
 }
