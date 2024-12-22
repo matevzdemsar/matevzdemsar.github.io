@@ -28,11 +28,12 @@ export function spellFilter (
     duration = false,
     concentration = false,
     ritual = false } = {}) {
+        console.log(components);
         return spells.filter((s) =>
             s.index.replace("-", " ").includes(name.toLowerCase())
             &&  (!pclass.length || pclass.some((pc) => s.classes.map((c) => c.name).includes(pc))) // To ni v redu, ker so classi ključi v objectu.
             && (!level.length || level.includes(s.level))
-            && (s.components.every((c) => components.includes(c)))
+            && (!components || s.components.every((c) => components.includes(c)))
             && (!casting_time.length || casting_time.includes(s.casting_time))
             && (!range.length || range.includes(s.range))
             && (!duration.length || duration.includes(s.duration))

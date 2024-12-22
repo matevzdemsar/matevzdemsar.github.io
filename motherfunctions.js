@@ -103,6 +103,23 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     if(filter.type === 'checkbox') {
   
       const checkboxStates = [];
+
+      checkbox.addEventListener('change', () => {
+        if(checkbox.checked) {
+          optionsBox.style.display = 'block';
+          optionsBox.style.flexDirection = 'row';
+          optionsBox.style.gap = '10px';
+        } else {
+          optionsBox.style.display = 'none';
+          optionsBox.querySelectorAll('input').forEach((i) => {
+            i.checked = false;
+          })
+          checkboxStates.length = 0;
+          filterChoice[filter.index] = false;
+          console.log(checkboxStates);
+          display();
+        }
+      })
   
       filter.options.forEach((o, subIndex) => {
         
@@ -110,24 +127,11 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         option.type = 'checkbox';
         option.id = `option-${index}-${subIndex}`;
         option.name = filter.title;
+        console.log(option.id)
         
         const optionLabel = document.createElement('label');
         optionLabel.htmlFor = `option-${index}-${subIndex}`;
         optionLabel.textContent = o;
-  
-        checkbox.addEventListener('change', () => {
-          if(checkbox.checked) {
-            optionsBox.style.display = 'block';
-            optionsBox.style.flexDirection = 'row';
-            optionsBox.style.gap = '10px';
-          } else {
-            optionsBox.style.display = 'none';
-            optionsBox.querySelectorAll('input').forEach((i) => {
-              i.checked = false;
-            })
-            filterChoice[filter.index] = false;
-            display();
-          }
   
         option.addEventListener('change', () => {
             if(option.checked) {
@@ -142,10 +146,10 @@ export function createFilterBox(filterOptions, filterChoice, display) {
               display();
             }
           })
-  
-        optionsBox.appendChild(option);
-        optionsBox.appendChild(optionLabel);
-        })
+
+          optionsBox.appendChild(option);
+          optionsBox.appendChild(optionLabel);
+
       })
   
     } else if (filter.type === 'search') {
