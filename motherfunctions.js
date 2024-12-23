@@ -217,6 +217,19 @@ export function createFilterBox(filterOptions, filterChoice, display) {
           })
         })
     } else if (filter.type === 'operator') {
+
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+        optionsBox.style.display = 'block'
+        optionsBox.style.flexDirection = 'column';
+        optionsBox.style.gap = '10px';
+        } else {
+        optionsBox.style.display = 'none';
+        filterChoice[filter.type] = false; // or {value: 0, operation: ''}. Probably either will work, but maybe one will work better.
+        }
+      })
+
+      const operatorStates = [];
       filter.options.forEach((o, subIndex) => {
 
         const option = document.createElement('div');
@@ -224,17 +237,42 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         option.name = filter.title
 
         const optionLabel = document.createElement('label');
-        optionLabel.htmlFor(`option-${index}-${subIndex}`)
-        // option.textContent = (add when you determine the structure of operator-type inputs)
-        
+        optionLabel.htmlFor = `option-${index}-${subIndex}`
+        optionLabel.textContent = o;
+
+        const optionValue = document.createElement('input');
+        optionValue.type = 'number';
+        optionValue.inputMode = 'numeric';
+        optionValue.placeholder = '(number)'
+
+        const optionOperator = document.createElement('select');
+
+        const operators = ['>=', '===', '<='];
+        operators.forEach((op, opIndex) => {
+          const operator = document.createElement('option');
+          operator.value = op;
+          operator.textContent = op;
+          optionOperator.appendChild(operator);
+        });
+
+        optionOperator.addEventListener('change', () => {
+        });
+
+        optionValue.addEventListener('input', () => {
+          console.log(optionValue.value)
+
+        });
+
+        option.appendChild(optionOperator);
+        option.appendChild(optionValue);
 
         optionsBox.appendChild(option);
         optionsBox.appendChild(optionLabel);
 
-      })
+      });
     }
     div.appendChild(optionsBox)
-    optionsBox.style.display = 'none'
+    optionsBox.style.display = 'none';
     filterBox.appendChild(div);
   });
 }

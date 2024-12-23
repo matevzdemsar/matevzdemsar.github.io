@@ -15,7 +15,7 @@ const filterOptions = [
   {title: 'Name', index: 'name', type: 'search'},
   {title: 'Type', index: 'type', type: 'checkbox', options: ['Adventuring Gear',
     'Tools', 'Mounts and Vehicles', 'Weapon', 'Armor']},
-  
+  {title: 'Price', index: 'price', type: 'operator', options: [""]}
 ];
 
 function displayItems() {
