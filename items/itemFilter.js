@@ -22,14 +22,15 @@ export function itemFilter (
     rarity = false,
     ammunition = false,
     magic = false,
-    price = {value: 0, operation: ''},
-    weight = {value: 0, operation: ''}} = {}) {
+    price = {price: {value: 0, operation: ''}},
+    weight = {weight: {value: 0, operation: ''}}} = {}) {
+        console.log(price);
         return items
             .filter((i) => i.index.includes(name.toLowerCase().replace("-", " "))
             && (!type.length || type.includes(i.equipment_category.name))
             && (!rarity.length || rarity.includes(i.rarity))
             && (!ammunition || (i.ammunition === ammunition))
             && (!magic || (i.magic === magic))
-            && (operatorChoice(i.weight, weight.value, weight.operation))
-            && (operatorChoice(i.price, price.value, price.operation)));
+            && (!weight || operatorChoice(i.weight, weight.weight.value, weight.weight.operation))
+            && (!price || operatorChoice(i.price, price.price.value, price.price.operation)));
 }

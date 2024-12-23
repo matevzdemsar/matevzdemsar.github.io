@@ -13,9 +13,12 @@ const filterChoice = {}
 
 const filterOptions = [
   {title: 'Name', index: 'name', type: 'search'},
-  {title: 'Type', index: 'type', type: 'checkbox', options: ['Adventuring Gear',
-    'Tools', 'Mounts and Vehicles', 'Weapon', 'Armor']},
-  {title: 'Price', index: 'price', type: 'operator', options: [""]}
+  {title: 'Type', index: 'type', type: 'checkbox',
+    options: ['Adventuring Gear', 'Tools', 'Mounts and Vehicles', 'Weapon', 'Armor']},
+  {title: 'Price', index: 'price', type: 'operator',
+    options: [{category: 'price', c_name: ''}]},
+  {title: 'Weight', index: 'weight', type: 'operator',
+    options: [{category: 'weight', cname: ''}]}
 ];
 
 function displayItems() {

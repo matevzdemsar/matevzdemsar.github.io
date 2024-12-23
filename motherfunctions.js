@@ -225,20 +225,25 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionsBox.style.gap = '10px';
         } else {
         optionsBox.style.display = 'none';
-        filterChoice[filter.type] = false; // or {value: 0, operation: ''}. Probably either will work, but maybe one will work better.
-        }
-      })
+        filter.options.forEach((o, subIndex) => {
+          Object.assign(filterChoice[filter.index], {[o.category]: {}}) // or {value: 0, operation: ''}. Probably either will work, but maybe one will work better.
+        });
+        display();
+      }});
 
-      const operatorStates = [];
+      let firstClick = true
+      filterChoice[filter.index] = {}
+
       filter.options.forEach((o, subIndex) => {
+        Object.assign(filterChoice[filter.index], {[o.category]: {}})
 
         const option = document.createElement('div');
         option.id = `option-${index}-${subIndex}`;
-        option.name = filter.title
+        option.name = filter.title;
 
         const optionLabel = document.createElement('label');
-        optionLabel.htmlFor = `option-${index}-${subIndex}`
-        optionLabel.textContent = o;
+        optionLabel.htmlFor = `option-${index}-${subIndex}`;
+        optionLabel.textContent = o.c_name;
 
         const optionValue = document.createElement('input');
         optionValue.type = 'number';
@@ -256,18 +261,25 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         });
 
         optionOperator.addEventListener('change', () => {
+          filterChoice[filter.index][o.category] = 
+            {value: optionValue.value, operation: optionOperator.value};
+          firstClick = false
+          display();
         });
 
         optionValue.addEventListener('input', () => {
-          console.log(optionValue.value)
+          filterChoice[filter.index][o.category] = 
+            {value: optionValue.value, operation: optionOperator.value};
+          firstClick = false
+          display();
 
         });
 
         option.appendChild(optionOperator);
         option.appendChild(optionValue);
 
-        optionsBox.appendChild(option);
         optionsBox.appendChild(optionLabel);
+        optionsBox.appendChild(option);
 
       });
     }
