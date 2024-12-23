@@ -14,15 +14,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 2,
     "url": "/api/equipment/abacus",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -38,10 +34,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 1,
     "desc": [
       "As an action, you can splash the contents of this vial onto a creature within 5 feet of you or throw the vial up to 20 feet, shattering it on impact. In either case, make a ranged attack against a creature or object, treating the acid as an improvised weapon.",
@@ -49,8 +42,7 @@
     ],
     "url": "/api/equipment/acid-vial",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "special": [],
@@ -66,10 +58,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "desc": [
       "This sticky, adhesive fluid ignites when exposed to air.",
       "As an action, you can throw this flask up to 20 feet, shattering it on impact. Make a ranged attack against a creature or object, treating the alchemist's fire as an improvised weapon.",
@@ -78,8 +67,7 @@
     "weight": 1,
     "url": "/api/equipment/alchemists-fire-flask",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "special": [],
@@ -91,18 +79,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "weight": 8,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/alchemists-supplies",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "special": [],
@@ -118,18 +102,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A small box for alms, typically found in a priest's pack."
     ],
     "url": "/api/equipment/alms-box",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "special": [],
@@ -145,10 +125,7 @@
       "name": "Holy Symbols",
       "url": "/api/equipment-categories/holy-symbols"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 1,
     "desc": [
       "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
@@ -156,8 +133,7 @@
     ],
     "url": "/api/equipment/amulet",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -170,15 +146,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 10,
     "url": "/api/equipment/animal-feed-1-day",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "special": [],
@@ -194,18 +166,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "weight": 0,
     "desc": [
       "A creature that drinks this vial of liquid gains advantage on saving throws against poison for 1 hour. It confers no benefit to undead or constructs."
     ],
     "url": "/api/equipment/antitoxin-vial",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -223,15 +191,11 @@
       "url": "/api/equipment-categories/ammunition"
     },
     "quantity": 20,
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1,
     "url": "/api/equipment/arrow",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -248,15 +212,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 5,
     "url": "/api/equipment/backpack",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -268,18 +228,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "weight": 6,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/bagpipes",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "special": [],
@@ -295,10 +251,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 2,
     "desc": [
       "As an action, you can spill these tiny metal balls from their pouch to cover a level, square area that is 10 feet on a side.",
@@ -307,8 +260,7 @@
     ],
     "url": "/api/equipment/ball-bearings-bag-of-1000",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -320,18 +272,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 1600,
-      "unit": "gp"
-    },
+    "cost": 1600,
     "weight": 40,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-breastplate",
     "contents": [],
-    "properties": [],
-    "price": 1600
+    "properties": []
   },
   {
     "special": [],
@@ -343,18 +291,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 300,
-      "unit": "gp"
-    },
+    "cost": 300,
     "weight": 110,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-chain-mail",
     "contents": [],
-    "properties": [],
-    "price": 300
+    "properties": []
   },
   {
     "special": [],
@@ -366,18 +310,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 200,
-      "unit": "gp"
-    },
+    "cost": 200,
     "weight": 40,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-chain-shirt",
     "contents": [],
-    "properties": [],
-    "price": 200
+    "properties": []
   },
   {
     "special": [],
@@ -389,18 +329,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 3000,
-      "unit": "gp"
-    },
+    "cost": 3000,
     "weight": 80,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-half-plate",
     "contents": [],
-    "properties": [],
-    "price": 3000
+    "properties": []
   },
   {
     "special": [],
@@ -412,18 +348,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 40,
-      "unit": "gp"
-    },
+    "cost": 40,
     "weight": 24,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-hide",
     "contents": [],
-    "properties": [],
-    "price": 40
+    "properties": []
   },
   {
     "special": [],
@@ -435,18 +367,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 40,
-      "unit": "gp"
-    },
+    "cost": 40,
     "weight": 20,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-leather",
     "contents": [],
-    "properties": [],
-    "price": 40
+    "properties": []
   },
   {
     "special": [],
@@ -458,18 +386,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 16,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-padded",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "special": [],
@@ -481,18 +405,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 6000,
-      "unit": "gp"
-    },
+    "cost": 6000,
     "weight": 130,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-plate",
     "contents": [],
-    "properties": [],
-    "price": 6000
+    "properties": []
   },
   {
     "special": [],
@@ -504,18 +424,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 12,
-      "unit": "gp"
-    },
+    "cost": 12,
     "weight": 80,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-ring-mail",
     "contents": [],
-    "properties": [],
-    "price": 12
+    "properties": []
   },
   {
     "special": [],
@@ -527,18 +443,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 200,
-      "unit": "gp"
-    },
+    "cost": 200,
     "weight": 90,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-scale-mail",
     "contents": [],
-    "properties": [],
-    "price": 200
+    "properties": []
   },
   {
     "special": [],
@@ -550,18 +462,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 800,
-      "unit": "gp"
-    },
+    "cost": 800,
     "weight": 120,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-splint",
     "contents": [],
-    "properties": [],
-    "price": 800
+    "properties": []
   },
   {
     "special": [],
@@ -573,18 +481,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 180,
-      "unit": "gp"
-    },
+    "cost": 180,
     "weight": 26,
     "desc": [
       "Barding is armor designed to protect an animal's head, neck, chest, and body. Any type of armor shown on the Armor table can be purchased as barding. The cost is four times the equivalent armor made for humanoids, and it weighs twice as much."
     ],
     "url": "/api/equipment/barding-studded-leather",
     "contents": [],
-    "properties": [],
-    "price": 180
+    "properties": []
   },
   {
     "desc": [],
@@ -601,15 +505,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 70,
     "url": "/api/equipment/barrel",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -626,15 +526,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 4,
-      "unit": "sp"
-    },
+    "cost": 0.4,
     "weight": 2,
     "url": "/api/equipment/basket",
     "contents": [],
-    "properties": [],
-    "price": 0.4
+    "properties": []
   },
   {
     "desc": [],
@@ -649,10 +545,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -681,8 +574,7 @@
       }
     },
     "url": "/api/equipment/battleaxe",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "desc": [],
@@ -699,15 +591,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 7,
     "url": "/api/equipment/bedroll",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -724,15 +612,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 0,
     "url": "/api/equipment/bell",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -745,15 +629,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 1,
     "url": "/api/equipment/bit-and-bridle",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -770,15 +650,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 3,
     "url": "/api/equipment/blanket",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -794,18 +670,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 5,
     "desc": [
       "A set of pulleys with a cable threaded through them and a hook to attach to objects, a block and tackle allows you to hoist up to four times the weight you can normally lift."
     ],
     "url": "/api/equipment/block-and-tackle",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -821,18 +693,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A block of incense, typically found in a priest's pack."
     ],
     "url": "/api/equipment/block-of-incense",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "desc": [],
@@ -847,10 +715,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Ranged",
     "category_range": "Martial Ranged",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "1",
       "damage_type": {
@@ -877,8 +742,7 @@
       }
     ],
     "url": "/api/equipment/blowgun",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "desc": [],
@@ -896,15 +760,11 @@
       "url": "/api/equipment-categories/ammunition"
     },
     "quantity": 50,
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1,
     "url": "/api/equipment/blowgun-needle",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -920,18 +780,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 5,
     "desc": [
       "A book might contain poetry, historical accounts, information pertaining to a particular field of lore, diagrams and notes on gnomish contraptions, or just about anything else that can be represented using text or pictures. A book of spells is a spellbook (described later in this section)."
     ],
     "url": "/api/equipment/book",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -948,15 +804,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 2,
     "url": "/api/equipment/bottle-glass",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -977,14 +829,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 20,
-    "cost": {
-      "quantity": 400,
-      "unit": "gp"
-    },
+    "cost": 400,
     "url": "/api/equipment/breastplate",
     "contents": [],
-    "properties": [],
-    "price": 400
+    "properties": []
   },
   {
     "special": [],
@@ -996,18 +844,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 9,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/brewers-supplies",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "desc": [],
@@ -1024,15 +868,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 2,
     "url": "/api/equipment/bucket",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "desc": [],
@@ -1049,10 +889,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 16,
-      "unit": "gp"
-    },
+    "cost": 16,
     "contents": [
       {
         "item": {
@@ -1168,8 +1005,7 @@
       }
     ],
     "url": "/api/equipment/burglars-pack",
-    "properties": [],
-    "price": 16
+    "properties": []
   },
   {
     "special": [],
@@ -1181,18 +1017,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/calligraphers-supplies",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -1208,10 +1040,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 2,
     "desc": [
       "As an action, you can spread a bag of caltrops to cover a square area that is 5 feet on a side.",
@@ -1221,8 +1050,7 @@
     ],
     "url": "/api/equipment/caltrops",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "desc": [],
@@ -1235,10 +1063,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "speed": {
       "quantity": 50,
       "unit": "ft/round"
@@ -1246,8 +1071,7 @@
     "capacity": "480 lb.",
     "url": "/api/equipment/camel",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "special": [],
@@ -1263,18 +1087,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "cp"
-    },
+    "cost": 0.01,
     "weight": 0,
     "desc": [
       "For 1 hour, a candle sheds bright light in a 5-foot radius and dim light for an additional 5 feet."
     ],
     "url": "/api/equipment/candle",
     "contents": [],
-    "properties": [],
-    "price": 0.01
+    "properties": []
   },
   {
     "special": [],
@@ -1286,18 +1106,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 8,
-      "unit": "gp"
-    },
+    "cost": 8,
     "weight": 6,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/carpenters-tools",
     "contents": [],
-    "properties": [],
-    "price": 8
+    "properties": []
   },
   {
     "desc": [],
@@ -1310,15 +1126,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 100,
-      "unit": "gp"
-    },
+    "cost": 100,
     "weight": 600,
     "url": "/api/equipment/carriage",
     "contents": [],
-    "properties": [],
-    "price": 100
+    "properties": []
   },
   {
     "desc": [],
@@ -1331,15 +1143,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "weight": 200,
     "url": "/api/equipment/cart",
     "contents": [],
-    "properties": [],
-    "price": 15
+    "properties": []
   },
   {
     "special": [],
@@ -1351,18 +1159,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "weight": 6,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/cartographers-tools",
     "contents": [],
-    "properties": [],
-    "price": 15
+    "properties": []
   },
   {
     "special": [],
@@ -1378,18 +1182,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1,
     "desc": [
       "This wooden case can hold up to twenty crossbow bolts."
     ],
     "url": "/api/equipment/case-crossbow-bolt",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -1405,18 +1205,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1,
     "desc": [
       "This cylindrical leather case can hold up to ten rolled-up sheets of paper or five rolled-up sheets of parchment."
     ],
     "url": "/api/equipment/case-map-or-scroll",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -1432,18 +1228,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A censer, typically found in a priest's pack."
     ],
     "url": "/api/equipment/censer",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "special": [],
@@ -1459,18 +1251,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 10,
     "desc": [
       "A chain has 10 hit points. It can be burst with a successful DC 20 Strength check."
     ],
     "url": "/api/equipment/chain-10-feet",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -1490,14 +1278,10 @@
     "str_minimum": 13,
     "stealth_disadvantage": true,
     "weight": 55,
-    "cost": {
-      "quantity": 75,
-      "unit": "gp"
-    },
+    "cost": 75,
     "url": "/api/equipment/chain-mail",
     "contents": [],
-    "properties": [],
-    "price": 75
+    "properties": []
   },
   {
     "desc": [],
@@ -1518,14 +1302,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 20,
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "url": "/api/equipment/chain-shirt",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -1542,15 +1322,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "cp"
-    },
+    "cost": 0.01,
     "weight": 0,
     "url": "/api/equipment/chalk-1-piece",
     "contents": [],
-    "properties": [],
-    "price": 0.01
+    "properties": []
   },
   {
     "desc": [],
@@ -1563,15 +1339,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 250,
-      "unit": "gp"
-    },
+    "cost": 250,
     "weight": 100,
     "url": "/api/equipment/chariot",
     "contents": [],
-    "properties": [],
-    "price": 250
+    "properties": []
   },
   {
     "desc": [],
@@ -1588,15 +1360,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 25,
     "url": "/api/equipment/chest",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -1612,18 +1380,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 12,
     "desc": [
       "A climber's kit includes special pitons, boot tips, gloves, and a harness. You can use the climber's kit as an action to anchor yourself; when you do, you can't fall more than 25 feet from the point where you anchored yourself, and you can't climb more than 25 feet away from that point without undoing the anchor."
     ],
     "url": "/api/equipment/climbers-kit",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -1640,15 +1404,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 3,
     "url": "/api/equipment/clothes-common",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "desc": [],
@@ -1665,15 +1425,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 4,
     "url": "/api/equipment/clothes-costume",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -1690,15 +1446,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "weight": 6,
     "url": "/api/equipment/clothes-fine",
     "contents": [],
-    "properties": [],
-    "price": 15
+    "properties": []
   },
   {
     "desc": [],
@@ -1715,15 +1467,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 4,
     "url": "/api/equipment/clothes-travelers",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -1738,10 +1486,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -1767,8 +1512,7 @@
       }
     ],
     "url": "/api/equipment/club",
-    "contents": [],
-    "price": 0.1
+    "contents": []
   },
   {
     "special": [],
@@ -1780,18 +1524,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/cobblers-tools",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -1807,18 +1547,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 2,
     "desc": [
       "A component pouch is a small, watertight leather belt pouch that has compartments to hold all the material components and other special items you need to cast your spells, except for those components that have a specific cost (as indicated in a spell's description)."
     ],
     "url": "/api/equipment/component-pouch",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "special": [],
@@ -1830,18 +1566,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 8,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/cooks-utensils",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -1859,15 +1591,11 @@
       "url": "/api/equipment-categories/ammunition"
     },
     "quantity": 20,
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1.5,
     "url": "/api/equipment/crossbow-bolt",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -1882,10 +1610,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Ranged",
     "category_range": "Martial Ranged",
-    "cost": {
-      "quantity": 75,
-      "unit": "gp"
-    },
+    "cost": 75,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -1917,8 +1642,7 @@
       }
     ],
     "url": "/api/equipment/crossbow-hand",
-    "contents": [],
-    "price": 75
+    "contents": []
   },
   {
     "desc": [],
@@ -1933,10 +1657,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Ranged",
     "category_range": "Martial Ranged",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "damage": {
       "damage_dice": "1d10",
       "damage_type": {
@@ -1973,8 +1694,7 @@
       }
     ],
     "url": "/api/equipment/crossbow-heavy",
-    "contents": [],
-    "price": 50
+    "contents": []
   },
   {
     "desc": [],
@@ -1989,10 +1709,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Ranged",
     "category_range": "Simple Ranged",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -2024,8 +1741,7 @@
       }
     ],
     "url": "/api/equipment/crossbow-light",
-    "contents": [],
-    "price": 25
+    "contents": []
   },
   {
     "special": [],
@@ -2041,18 +1757,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 5,
     "desc": [
       "Using a crowbar grants advantage to Strength checks where the crowbar's leverage can be applied."
     ],
     "url": "/api/equipment/crowbar",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -2068,18 +1780,14 @@
       "name": "Arcane Foci",
       "url": "/api/equipment-categories/arcane-foci"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 1,
     "desc": [
       "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
     ],
     "url": "/api/equipment/crystal",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -2094,10 +1802,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -2137,8 +1842,7 @@
       "long": 60
     },
     "url": "/api/equipment/dagger",
-    "contents": [],
-    "price": 2
+    "contents": []
   },
   {
     "desc": [],
@@ -2153,10 +1857,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Ranged",
     "category_range": "Simple Ranged",
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -2187,8 +1888,7 @@
       "long": 60
     },
     "url": "/api/equipment/dart",
-    "contents": [],
-    "price": 0.05
+    "contents": []
   },
   {
     "special": [],
@@ -2200,18 +1900,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Gaming Sets",
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "weight": 0,
     "desc": [
       "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
     ],
     "url": "/api/equipment/dice-set",
     "contents": [],
-    "properties": [],
-    "price": 0.1
+    "properties": []
   },
   {
     "desc": [],
@@ -2228,10 +1924,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 39,
-      "unit": "gp"
-    },
+    "cost": 39,
     "contents": [
       {
         "item": {
@@ -2323,8 +2016,7 @@
       }
     ],
     "url": "/api/equipment/diplomats-pack",
-    "properties": [],
-    "price": 39
+    "properties": []
   },
   {
     "special": [],
@@ -2340,18 +2032,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 3,
     "desc": [
       "This pouch of cosmetics, hair dye, and small props lets you create disguises that change your physical appearance. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a visual disguise."
     ],
     "url": "/api/equipment/disguise-kit",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -2364,10 +2052,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 8,
-      "unit": "gp"
-    },
+    "cost": 8,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -2375,8 +2060,7 @@
     "capacity": "420 lb.",
     "url": "/api/equipment/donkey",
     "contents": [],
-    "properties": [],
-    "price": 8
+    "properties": []
   },
   {
     "special": [],
@@ -2388,18 +2072,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 6,
-      "unit": "gp"
-    },
+    "cost": 6,
     "weight": 3,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/drum",
     "contents": [],
-    "properties": [],
-    "price": 6
+    "properties": []
   },
   {
     "special": [],
@@ -2411,18 +2091,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 10,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/dulcimer",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -2439,10 +2115,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 12,
-      "unit": "gp"
-    },
+    "cost": 12,
     "contents": [
       {
         "item": {
@@ -2518,8 +2191,7 @@
       }
     ],
     "url": "/api/equipment/dungeoneers-pack",
-    "properties": [],
-    "price": 12
+    "properties": []
   },
   {
     "desc": [],
@@ -2532,10 +2204,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 200,
-      "unit": "gp"
-    },
+    "cost": 200,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -2543,8 +2212,7 @@
     "capacity": "1,320 lb.",
     "url": "/api/equipment/elephant",
     "contents": [],
-    "properties": [],
-    "price": 200
+    "properties": []
   },
   {
     "special": [],
@@ -2560,10 +2228,7 @@
       "name": "Holy Symbols",
       "url": "/api/equipment-categories/holy-symbols"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 0,
     "desc": [
       "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
@@ -2571,8 +2236,7 @@
     ],
     "url": "/api/equipment/emblem",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -2589,10 +2253,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 40,
-      "unit": "gp"
-    },
+    "cost": 40,
     "contents": [
       {
         "item": {
@@ -2652,8 +2313,7 @@
       }
     ],
     "url": "/api/equipment/entertainers-pack",
-    "properties": [],
-    "price": 40
+    "properties": []
   },
   {
     "desc": [],
@@ -2670,10 +2330,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "contents": [
       {
         "item": {
@@ -2741,8 +2398,7 @@
       }
     ],
     "url": "/api/equipment/explorers-pack",
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -2758,18 +2414,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 4,
     "desc": [
       "This kit includes a wooden rod, silken line, corkwood bobbers, steel hooks, lead sinkers, velvet lures, and narrow netting."
     ],
     "url": "/api/equipment/fishing-tackle",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -2784,10 +2436,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -2802,8 +2451,7 @@
     "weight": 2,
     "properties": [],
     "url": "/api/equipment/flail",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "desc": [],
@@ -2820,15 +2468,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "cp"
-    },
+    "cost": 0.02,
     "weight": 1,
     "url": "/api/equipment/flask-or-tankard",
     "contents": [],
-    "properties": [],
-    "price": 0.02
+    "properties": []
   },
   {
     "special": [],
@@ -2840,18 +2484,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 1,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/flute",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -2867,18 +2507,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "weight": 5,
     "desc": [
       "This small box contains a variety of papers and parchments, pens and inks, seals and sealing wax, gold and silver leaf, and other supplies necessary to create convincing forgeries of physical documents. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to create a physical forgery of a document."
     ],
     "url": "/api/equipment/forgery-kit",
     "contents": [],
-    "properties": [],
-    "price": 15
+    "properties": []
   },
   {
     "desc": [],
@@ -2891,18 +2527,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 30000,
-      "unit": "gp"
-    },
+    "cost": 30000,
     "speed": {
       "quantity": 4,
       "unit": "mph"
     },
     "url": "/api/equipment/galley",
     "contents": [],
-    "properties": [],
-    "price": 30000
+    "properties": []
   },
   {
     "desc": [],
@@ -2917,10 +2549,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "damage": {
       "damage_dice": "1d10",
       "damage_type": {
@@ -2951,8 +2580,7 @@
       }
     ],
     "url": "/api/equipment/glaive",
-    "contents": [],
-    "price": 20
+    "contents": []
   },
   {
     "special": [],
@@ -2964,18 +2592,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/glassblowers-tools",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "desc": [],
@@ -2992,15 +2616,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 4,
     "url": "/api/equipment/grappling-hook",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -3015,10 +2635,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "damage": {
       "damage_dice": "1d12",
       "damage_type": {
@@ -3044,8 +2661,7 @@
       }
     ],
     "url": "/api/equipment/greataxe",
-    "contents": [],
-    "price": 30
+    "contents": []
   },
   {
     "desc": [],
@@ -3060,10 +2676,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 2,
-      "unit": "sp"
-    },
+    "cost": 0.2,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -3084,8 +2697,7 @@
       }
     ],
     "url": "/api/equipment/greatclub",
-    "contents": [],
-    "price": 0.2
+    "contents": []
   },
   {
     "desc": [],
@@ -3100,10 +2712,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "damage": {
       "damage_dice": "2d6",
       "damage_type": {
@@ -3129,8 +2738,7 @@
       }
     ],
     "url": "/api/equipment/greatsword",
-    "contents": [],
-    "price": 50
+    "contents": []
   },
   {
     "desc": [],
@@ -3145,10 +2753,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "damage": {
       "damage_dice": "1d10",
       "damage_type": {
@@ -3179,8 +2784,7 @@
       }
     ],
     "url": "/api/equipment/halberd",
-    "contents": [],
-    "price": 20
+    "contents": []
   },
   {
     "desc": [],
@@ -3201,14 +2805,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": true,
     "weight": 40,
-    "cost": {
-      "quantity": 750,
-      "unit": "gp"
-    },
+    "cost": 750,
     "url": "/api/equipment/half-plate-armor",
     "contents": [],
-    "properties": [],
-    "price": 750
+    "properties": []
   },
   {
     "desc": [],
@@ -3225,15 +2825,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 3,
     "url": "/api/equipment/hammer",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -3250,15 +2846,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 10,
     "url": "/api/equipment/hammer-sledge",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -3273,10 +2865,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -3311,8 +2900,7 @@
       "long": 60
     },
     "url": "/api/equipment/handaxe",
-    "contents": [],
-    "price": 5
+    "contents": []
   },
   {
     "special": [],
@@ -3328,18 +2916,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 3,
     "desc": [
       "This kit is a leather pouch containing bandages, salves, and splints. The kit has ten uses. As an action, you can expend one use of the kit to stabilize a creature that has 0 hit points, without needing to make a Wisdom (Medicine) check."
     ],
     "url": "/api/equipment/healers-kit",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -3355,18 +2939,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 3,
     "desc": [
       "This kit contains a variety of instruments such as clippers, mortar and pestle, and pouches and vials used by herbalists to create remedies and potions. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to identify or apply herbs. Also, proficiency with this kit is required to create antitoxin and potions of healing."
     ],
     "url": "/api/equipment/herbalism-kit",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -3387,14 +2967,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 12,
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "url": "/api/equipment/hide-armor",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -3410,10 +2986,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 1,
     "desc": [
       "As an action, you can splash the contents of this flask onto a creature within 5 feet of you or throw it up to 20 feet, shattering it on impact. In either case, make a ranged attack against a target creature, treating the holy water as an improvised weapon.",
@@ -3423,8 +2996,7 @@
     ],
     "url": "/api/equipment/holy-water-flask",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "special": [],
@@ -3436,18 +3008,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 3,
-      "unit": "gp"
-    },
+    "cost": 3,
     "weight": 2,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/horn",
     "contents": [],
-    "properties": [],
-    "price": 3
+    "properties": []
   },
   {
     "desc": [],
@@ -3460,10 +3028,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -3471,8 +3036,7 @@
     "capacity": "540 lb.",
     "url": "/api/equipment/horse-draft",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -3485,10 +3049,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 75,
-      "unit": "gp"
-    },
+    "cost": 75,
     "speed": {
       "quantity": 60,
       "unit": "ft/round"
@@ -3496,8 +3057,7 @@
     "capacity": "480 lb.",
     "url": "/api/equipment/horse-riding",
     "contents": [],
-    "properties": [],
-    "price": 75
+    "properties": []
   },
   {
     "desc": [],
@@ -3514,15 +3074,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 1,
     "url": "/api/equipment/hourglass",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "special": [],
@@ -3538,10 +3094,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "desc": [
       "When you use your action to set it, this trap forms a saw-toothed steel ring that snaps shut when a creature steps on a pressure plate in the center. The trap is affixed by a heavy chain to an immobile object, such as a tree or a spike driven into the ground.",
       "A creature that steps on the plate must succeed on a DC 13 Dexterity saving throw or take 1d4 piercing damage and stop moving. Thereafter, until the creature breaks free of the trap, its movement is limited by the length of the chain (typically 3 feet long).",
@@ -3550,8 +3103,7 @@
     "weight": 25,
     "url": "/api/equipment/hunting-trap",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -3568,15 +3120,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 0,
     "url": "/api/equipment/ink-1-ounce-bottle",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -3593,15 +3141,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "cp"
-    },
+    "cost": 0.02,
     "weight": 0,
     "url": "/api/equipment/ink-pen",
     "contents": [],
-    "properties": [],
-    "price": 0.02
+    "properties": []
   },
   {
     "desc": [],
@@ -3616,10 +3160,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -3649,8 +3190,7 @@
       "long": 120
     },
     "url": "/api/equipment/javelin",
-    "contents": [],
-    "price": 0.5
+    "contents": []
   },
   {
     "special": [],
@@ -3662,18 +3202,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 2,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/jewelers-tools",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -3690,15 +3226,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "cp"
-    },
+    "cost": 0.02,
     "weight": 4,
     "url": "/api/equipment/jug-or-pitcher",
     "contents": [],
-    "properties": [],
-    "price": 0.02
+    "properties": []
   },
   {
     "special": [],
@@ -3710,10 +3242,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 3000,
-      "unit": "gp"
-    },
+    "cost": 3000,
     "speed": {
       "quantity": 1,
       "unit": "mph"
@@ -3723,8 +3252,7 @@
     ],
     "url": "/api/equipment/keelboat",
     "contents": [],
-    "properties": [],
-    "price": 3000
+    "properties": []
   },
   {
     "desc": [],
@@ -3741,15 +3269,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "weight": 25,
     "url": "/api/equipment/ladder-10-foot",
     "contents": [],
-    "properties": [],
-    "price": 0.1
+    "properties": []
   },
   {
     "special": [],
@@ -3765,18 +3289,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 1,
     "desc": [
       "A lamp casts bright light in a 15-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
     ],
     "url": "/api/equipment/lamp",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "desc": [],
@@ -3790,10 +3310,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "1d12",
       "damage_type": {
@@ -3822,8 +3339,7 @@
       "You have disadvantage when you use a lance to attack a target within 5 feet of you. Also, a lance requires two hands to wield when you aren't mounted."
     ],
     "url": "/api/equipment/lance",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "special": [],
@@ -3839,18 +3355,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 2,
     "desc": [
       "A bullseye lantern casts bright light in a 60-foot cone and dim light for an additional 60 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil."
     ],
     "url": "/api/equipment/lantern-bullseye",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -3866,18 +3378,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 2,
     "desc": [
       "A hooded lantern casts bright light in a 30-foot radius and dim light for an additional 30 feet. Once lit, it burns for 6 hours on a flask (1 pint) of oil. As an action, you can lower the hood, reducing the light to dim light in a 5-foot radius."
     ],
     "url": "/api/equipment/lantern-hooded",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -3897,14 +3405,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 10,
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "url": "/api/equipment/leather-armor",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -3916,18 +3420,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/leatherworkers-tools",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -3942,10 +3442,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -3980,8 +3477,7 @@
       "long": 60
     },
     "url": "/api/equipment/light-hammer",
-    "contents": [],
-    "price": 2
+    "contents": []
   },
   {
     "special": [],
@@ -3997,18 +3493,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A small bag of sand, typically found in a scholar's pack."
     ],
     "url": "/api/equipment/little-bag-of-sand",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "special": [],
@@ -4024,18 +3516,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 1,
     "desc": [
       "A key is provided with the lock. Without the key, a creature proficient with thieves' tools can pick this lock with a successful DC 15 Dexterity check. Your GM may decide that better locks are available for higher prices."
     ],
     "url": "/api/equipment/lock",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -4050,10 +3538,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Ranged",
     "category_range": "Martial Ranged",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -4085,8 +3570,7 @@
       }
     ],
     "url": "/api/equipment/longbow",
-    "contents": [],
-    "price": 50
+    "contents": []
   },
   {
     "desc": [],
@@ -4099,18 +3583,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 10000,
-      "unit": "gp"
-    },
+    "cost": 10000,
     "speed": {
       "quantity": 3,
       "unit": "mph"
     },
     "url": "/api/equipment/longship",
     "contents": [],
-    "properties": [],
-    "price": 10000
+    "properties": []
   },
   {
     "desc": [],
@@ -4125,10 +3605,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -4157,8 +3634,7 @@
       }
     },
     "url": "/api/equipment/longsword",
-    "contents": [],
-    "price": 15
+    "contents": []
   },
   {
     "special": [],
@@ -4170,18 +3646,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 35,
-      "unit": "gp"
-    },
+    "cost": 35,
     "weight": 2,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/lute",
     "contents": [],
-    "properties": [],
-    "price": 35
+    "properties": []
   },
   {
     "special": [],
@@ -4193,18 +3665,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "weight": 2,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/lyre",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "desc": [],
@@ -4219,10 +3687,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -4243,8 +3708,7 @@
       }
     ],
     "url": "/api/equipment/mace",
-    "contents": [],
-    "price": 5
+    "contents": []
   },
   {
     "special": [],
@@ -4260,10 +3724,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 100,
-      "unit": "gp"
-    },
+    "cost": 100,
     "weight": 0,
     "desc": [
       "This lens allows a closer look at small objects. It is also useful as a substitute for flint and steel when starting fires. Lighting a fire with a magnifying glass requires light as bright as sunlight to focus, tinder to ignite, and about 5 minutes for the fire to ignite.",
@@ -4271,8 +3732,7 @@
     ],
     "url": "/api/equipment/magnifying-glass",
     "contents": [],
-    "properties": [],
-    "price": 100
+    "properties": []
   },
   {
     "special": [],
@@ -4288,10 +3748,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 6,
     "desc": [
       "These metal restraints can bind a Small or Medium creature. Escaping the manacles requires a successful DC 20 Dexterity check. Breaking them requires a successful DC 20 Strength check.",
@@ -4299,8 +3756,7 @@
     ],
     "url": "/api/equipment/manacles",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -4312,18 +3768,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 8,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/masons-tools",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -4336,10 +3788,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -4347,8 +3796,7 @@
     "capacity": "195 lb.",
     "url": "/api/equipment/mastiff",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -4363,10 +3811,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "2d6",
       "damage_type": {
@@ -4392,8 +3837,7 @@
       }
     ],
     "url": "/api/equipment/maul",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "special": [],
@@ -4409,18 +3853,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "sp"
-    },
+    "cost": 0.2,
     "weight": 1,
     "desc": [
       "This tin box contains a cup and simple cutlery. The box clamps together, and one side can be used as a cooking pan and the other as a plate or shallow bowl."
     ],
     "url": "/api/equipment/mess-kit",
     "contents": [],
-    "properties": [],
-    "price": 0.2
+    "properties": []
   },
   {
     "desc": [],
@@ -4437,15 +3877,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 0.5,
     "url": "/api/equipment/mirror-steel",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -4460,10 +3896,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -4478,8 +3911,7 @@
     "weight": 4,
     "properties": [],
     "url": "/api/equipment/morningstar",
-    "contents": [],
-    "price": 15
+    "contents": []
   },
   {
     "desc": [],
@@ -4492,10 +3924,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 8,
-      "unit": "gp"
-    },
+    "cost": 8,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -4503,8 +3932,7 @@
     "capacity": "420 lb.",
     "url": "/api/equipment/mule",
     "contents": [],
-    "properties": [],
-    "price": 8
+    "properties": []
   },
   {
     "special": [],
@@ -4516,18 +3944,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Other Tools",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 2,
     "desc": [
       "This set of instruments is used for navigation at sea. Proficiency with navigator's tools lets you chart a ship's course and follow navigation charts. In addition, these tools allow you to add your proficiency bonus to any ability check you make to avoid getting lost at sea."
     ],
     "url": "/api/equipment/navigators-tools",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "desc": [],
@@ -4541,10 +3965,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Ranged",
     "category_range": "Martial Ranged",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "range": {
       "normal": 5,
       "long": 15
@@ -4570,8 +3991,7 @@
       "long": 15
     },
     "url": "/api/equipment/net",
-    "contents": [],
-    "price": 1
+    "contents": []
   },
   {
     "special": [],
@@ -4587,10 +4007,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "weight": 1,
     "desc": [
       "Oil usually comes in a clay flask that holds 1 pint.",
@@ -4601,8 +4018,7 @@
     ],
     "url": "/api/equipment/oil-flask",
     "contents": [],
-    "properties": [],
-    "price": 0.1
+    "properties": []
   },
   {
     "special": [],
@@ -4618,18 +4034,14 @@
       "name": "Arcane Foci",
       "url": "/api/equipment-categories/arcane-foci"
     },
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 3,
     "desc": [
       "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
     ],
     "url": "/api/equipment/orb",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "desc": [],
@@ -4649,14 +4061,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": true,
     "weight": 8,
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "url": "/api/equipment/padded-armor",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -4668,18 +4076,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/painters-supplies",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -4691,18 +4095,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 12,
-      "unit": "gp"
-    },
+    "cost": 12,
     "weight": 2,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/pan-flute",
     "contents": [],
-    "properties": [],
-    "price": 12
+    "properties": []
   },
   {
     "desc": [],
@@ -4719,15 +4119,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "sp"
-    },
+    "cost": 0.2,
     "weight": 0,
     "url": "/api/equipment/paper-one-sheet",
     "contents": [],
-    "properties": [],
-    "price": 0.2
+    "properties": []
   },
   {
     "desc": [],
@@ -4744,15 +4140,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "weight": 0,
     "url": "/api/equipment/parchment-one-sheet",
     "contents": [],
-    "properties": [],
-    "price": 0.1
+    "properties": []
   },
   {
     "desc": [],
@@ -4769,15 +4161,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 0,
     "url": "/api/equipment/perfume-vial",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -4794,15 +4182,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 10,
     "url": "/api/equipment/pick-miners",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -4817,10 +4201,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "damage": {
       "damage_dice": "1d10",
       "damage_type": {
@@ -4851,8 +4232,7 @@
       }
     ],
     "url": "/api/equipment/pike",
-    "contents": [],
-    "price": 5
+    "contents": []
   },
   {
     "desc": [],
@@ -4869,15 +4249,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 0.25,
     "url": "/api/equipment/piton",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "desc": [],
@@ -4897,14 +4273,10 @@
     "str_minimum": 15,
     "stealth_disadvantage": true,
     "weight": 65,
-    "cost": {
-      "quantity": 1500,
-      "unit": "gp"
-    },
+    "cost": 1500,
     "url": "/api/equipment/plate-armor",
     "contents": [],
-    "properties": [],
-    "price": 1500
+    "properties": []
   },
   {
     "special": [],
@@ -4916,18 +4288,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Gaming Sets",
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 0,
     "desc": [
       "This item encompasses a wide range of game pieces, including dice and decks of cards (for games such as Three-Dragon Ante). A few common examples appear on the Tools table, but other kinds of gaming sets exist. If you are proficient with a gaming set, you can add your proficiency bonus to ability checks you make to play a game with that set. Each type of gaming set requires a separate proficiency."
     ],
     "url": "/api/equipment/playing-card-set",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -4943,18 +4311,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 100,
-      "unit": "gp"
-    },
+    "cost": 100,
     "weight": 0,
     "desc": [
       "You can use the poison in this vial to coat one slashing or piercing weapon or up to three pieces of ammunition. Applying the poison takes an action. A creature hit by the poisoned weapon or ammunition must make a DC 10 Constitution saving throw or take 1d4 poison damage. Once applied, the poison retains potency for 1 minute before drying."
     ],
     "url": "/api/equipment/poison-basic-vial",
     "contents": [],
-    "properties": [],
-    "price": 100
+    "properties": []
   },
   {
     "special": [],
@@ -4970,18 +4334,14 @@
       "name": "Kits",
       "url": "/api/equipment-categories/kits"
     },
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "weight": 2,
     "desc": [
       "A poisoner's kit includes the vials, chemicals, and other equipment necessary for the creation of poisons. Proficiency with this kit lets you add your proficiency bonus to any ability checks you make to craft or use poisons."
     ],
     "url": "/api/equipment/poisoners-kit",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -4998,15 +4358,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 7,
     "url": "/api/equipment/pole-10-foot",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "desc": [],
@@ -5019,10 +4375,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "speed": {
       "quantity": 40,
       "unit": "ft/round"
@@ -5030,8 +4383,7 @@
     "capacity": "225 lb.",
     "url": "/api/equipment/pony",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "desc": [],
@@ -5048,15 +4400,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 10,
     "url": "/api/equipment/pot-iron",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -5068,18 +4416,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 3,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/potters-tools",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -5095,18 +4439,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 1,
     "desc": [
       "A cloth or leather pouch can hold up to 20 sling bullets or 50 blowgun needles, among other things. A compartmentalized pouch for holding spell components is called a component pouch (described earlier in this section)."
     ],
     "url": "/api/equipment/pouch",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "desc": [],
@@ -5123,10 +4463,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 19,
-      "unit": "gp"
-    },
+    "cost": 19,
     "contents": [
       {
         "item": {
@@ -5210,8 +4547,7 @@
       }
     ],
     "url": "/api/equipment/priests-pack",
-    "properties": [],
-    "price": 19
+    "properties": []
   },
   {
     "desc": [],
@@ -5226,10 +4562,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 2,
-      "unit": "sp"
-    },
+    "cost": 0.2,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -5263,8 +4596,7 @@
       }
     },
     "url": "/api/equipment/quarterstaff",
-    "contents": [],
-    "price": 0.2
+    "contents": []
   },
   {
     "special": [],
@@ -5280,18 +4612,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 1,
     "desc": [
       "A quiver can hold up to 20 arrows."
     ],
     "url": "/api/equipment/quiver",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -5307,18 +4635,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 4,
-      "unit": "gp"
-    },
+    "cost": 4,
     "weight": 35,
     "desc": [
       "You can use a portable ram to break down doors. When doing so, you gain a +4 bonus on the Strength check. One other character can help you use the ram, giving you advantage on this check."
     ],
     "url": "/api/equipment/ram-portable",
     "contents": [],
-    "properties": [],
-    "price": 4
+    "properties": []
   },
   {
     "desc": [],
@@ -5333,10 +4657,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -5357,8 +4678,7 @@
       }
     ],
     "url": "/api/equipment/rapier",
-    "contents": [],
-    "price": 25
+    "contents": []
   },
   {
     "special": [],
@@ -5374,18 +4694,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 2,
     "desc": [
       "Rations consist of dry foods suitable for extended travel, including jerky, dried fruit, hardtack, and nuts."
     ],
     "url": "/api/equipment/rations-1-day",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -5401,10 +4717,7 @@
       "name": "Holy Symbols",
       "url": "/api/equipment-categories/holy-symbols"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 2,
     "desc": [
       "A holy symbol is a representation of a god or pantheon. It might be an amulet depicting a symbol representing a deity, the same symbol carefully engraved or inlaid as an emblem on a shield, or a tiny box holding a fragment of a sacred relic.",
@@ -5412,8 +4725,7 @@
     ],
     "url": "/api/equipment/reliquary",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -5433,14 +4745,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": true,
     "weight": 40,
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "url": "/api/equipment/ring-mail",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "desc": [],
@@ -5457,15 +4765,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 4,
     "url": "/api/equipment/robes",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -5481,18 +4785,14 @@
       "name": "Arcane Foci",
       "url": "/api/equipment-categories/arcane-foci"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 2,
     "desc": [
       "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
     ],
     "url": "/api/equipment/rod",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -5508,18 +4808,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 10,
     "desc": [
       "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
     ],
     "url": "/api/equipment/rope-hempen-50-feet",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -5535,18 +4831,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 5,
     "desc": [
       "Rope, whether made of hemp or silk, has 2 hit points and can be burst with a DC 17 Strength check."
     ],
     "url": "/api/equipment/rope-silk-50-feet",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "special": [],
@@ -5558,10 +4850,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "speed": {
       "quantity": 1.5,
       "unit": "mph"
@@ -5571,8 +4860,7 @@
     ],
     "url": "/api/equipment/rowboat",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -5589,15 +4877,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "cp"
-    },
+    "cost": 0.01,
     "weight": 0.5,
     "url": "/api/equipment/sack",
     "contents": [],
-    "properties": [],
-    "price": 0.01
+    "properties": []
   },
   {
     "special": [],
@@ -5609,18 +4893,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 60,
-      "unit": "gp"
-    },
+    "cost": 60,
     "weight": 50,
     "desc": [
       "An exotic saddle is required for riding any aquatic or flying mount."
     ],
     "url": "/api/equipment/saddle-exotic",
     "contents": [],
-    "properties": [],
-    "price": 60
+    "properties": []
   },
   {
     "special": [],
@@ -5632,18 +4912,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 30,
     "desc": [
       "A military saddle braces the rider, helping you keep your seat on an active mount in battle. It gives you advantage on any check you make to remain mounted."
     ],
     "url": "/api/equipment/saddle-military",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "desc": [],
@@ -5656,15 +4932,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 15,
     "url": "/api/equipment/saddle-pack",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -5677,15 +4949,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 25,
     "url": "/api/equipment/saddle-riding",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -5698,15 +4966,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 4,
-      "unit": "gp"
-    },
+    "cost": 4,
     "weight": 8,
     "url": "/api/equipment/saddlebags",
     "contents": [],
-    "properties": [],
-    "price": 4
+    "properties": []
   },
   {
     "desc": [],
@@ -5719,18 +4983,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 10000,
-      "unit": "gp"
-    },
+    "cost": 10000,
     "speed": {
       "quantity": 2,
       "unit": "mph"
     },
     "url": "/api/equipment/sailing-ship",
     "contents": [],
-    "properties": [],
-    "price": 10000
+    "properties": []
   },
   {
     "desc": [],
@@ -5751,14 +5011,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": true,
     "weight": 45,
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "url": "/api/equipment/scale-mail",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "special": [],
@@ -5774,18 +5030,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 3,
     "desc": [
       "A scale includes a small balance, pans, and a suitable assortment of weights up to 2 pounds. With it, you can measure the exact weight of small objects, such as raw precious metals or trade goods, to help determine their worth."
     ],
     "url": "/api/equipment/scale-merchants",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -5802,10 +5054,7 @@
       "name": "Equipment Packs",
       "url": "/api/equipment-categories/equipment-packs"
     },
-    "cost": {
-      "quantity": 40,
-      "unit": "gp"
-    },
+    "cost": 40,
     "contents": [
       {
         "item": {
@@ -5865,8 +5114,7 @@
       }
     ],
     "url": "/api/equipment/scholars-pack",
-    "properties": [],
-    "price": 40
+    "properties": []
   },
   {
     "desc": [],
@@ -5881,10 +5129,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -5910,8 +5155,7 @@
       }
     ],
     "url": "/api/equipment/scimitar",
-    "contents": [],
-    "price": 25
+    "contents": []
   },
   {
     "desc": [],
@@ -5928,15 +5172,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 0,
     "url": "/api/equipment/sealing-wax",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -5948,18 +5188,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 1,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/shawm",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -5979,14 +5215,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 6,
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "url": "/api/equipment/shield",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -6001,10 +5233,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Ranged",
     "category_range": "Simple Ranged",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -6031,8 +5260,7 @@
       }
     ],
     "url": "/api/equipment/shortbow",
-    "contents": [],
-    "price": 25
+    "contents": []
   },
   {
     "desc": [],
@@ -6047,10 +5275,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -6081,8 +5306,7 @@
       }
     ],
     "url": "/api/equipment/shortsword",
-    "contents": [],
-    "price": 10
+    "contents": []
   },
   {
     "desc": [],
@@ -6099,15 +5323,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 5,
     "url": "/api/equipment/shovel",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "desc": [],
@@ -6122,10 +5342,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -6151,8 +5368,7 @@
       }
     ],
     "url": "/api/equipment/sickle",
-    "contents": [],
-    "price": 1
+    "contents": []
   },
   {
     "desc": [],
@@ -6169,15 +5385,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "cp"
-    },
+    "cost": 0.05,
     "weight": 0,
     "url": "/api/equipment/signal-whistle",
     "contents": [],
-    "properties": [],
-    "price": 0.05
+    "properties": []
   },
   {
     "desc": [],
@@ -6194,15 +5406,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 0,
     "url": "/api/equipment/signet-ring",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "desc": [],
@@ -6215,15 +5423,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 300,
     "url": "/api/equipment/sled",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "desc": [],
@@ -6238,10 +5442,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Ranged",
     "category_range": "Simple Ranged",
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -6263,8 +5464,7 @@
       }
     ],
     "url": "/api/equipment/sling",
-    "contents": [],
-    "price": 0.1
+    "contents": []
   },
   {
     "desc": [],
@@ -6282,15 +5482,11 @@
       "url": "/api/equipment-categories/ammunition"
     },
     "quantity": 20,
-    "cost": {
-      "quantity": 4,
-      "unit": "cp"
-    },
+    "cost": 0.04,
     "weight": 1.5,
     "url": "/api/equipment/sling-bullet",
     "contents": [],
-    "properties": [],
-    "price": 0.04
+    "properties": []
   },
   {
     "special": [],
@@ -6306,18 +5502,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A small knife, typically found in a scholar's pack."
     ],
     "url": "/api/equipment/small-knife",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "special": [],
@@ -6329,18 +5521,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 20,
-      "unit": "gp"
-    },
+    "cost": 20,
     "weight": 8,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/smiths-tools",
     "contents": [],
-    "properties": [],
-    "price": 20
+    "properties": []
   },
   {
     "desc": [],
@@ -6357,15 +5545,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "cp"
-    },
+    "cost": 0.02,
     "weight": 0,
     "url": "/api/equipment/soap",
     "contents": [],
-    "properties": [],
-    "price": 0.02
+    "properties": []
   },
   {
     "desc": [],
@@ -6380,10 +5564,7 @@
     "weapon_category": "Simple",
     "weapon_range": "Melee",
     "category_range": "Simple Melee",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -6426,8 +5607,7 @@
       }
     },
     "url": "/api/equipment/spear",
-    "contents": [],
-    "price": 1
+    "contents": []
   },
   {
     "special": [],
@@ -6443,18 +5623,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "weight": 3,
     "desc": [
       "Essential for wizards, a spellbook is a leather-bound tome with 100 blank vellum pages suitable for recording spells."
     ],
     "url": "/api/equipment/spellbook",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "desc": [],
@@ -6471,15 +5647,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "sp"
-    },
+    "cost": 0.1,
     "weight": 5,
     "url": "/api/equipment/spike-iron",
     "contents": [],
-    "properties": [],
-    "price": 0.1
+    "properties": []
   },
   {
     "desc": [],
@@ -6499,14 +5671,10 @@
     "str_minimum": 15,
     "stealth_disadvantage": true,
     "weight": 60,
-    "cost": {
-      "quantity": 200,
-      "unit": "gp"
-    },
+    "cost": 200,
     "url": "/api/equipment/splint-armor",
     "contents": [],
-    "properties": [],
-    "price": 200
+    "properties": []
   },
   {
     "special": [],
@@ -6522,18 +5690,14 @@
       "name": "Druidic Foci",
       "url": "/api/equipment-categories/druidic-foci"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 0,
     "desc": [
       "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
     ],
     "url": "/api/equipment/sprig-of-mistletoe",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -6549,18 +5713,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1000,
-      "unit": "gp"
-    },
+    "cost": 1000,
     "weight": 1,
     "desc": [
       "Objects viewed through a spyglass are magnified to twice their size."
     ],
     "url": "/api/equipment/spyglass",
     "contents": [],
-    "properties": [],
-    "price": 1000
+    "properties": []
   },
   {
     "desc": [],
@@ -6573,15 +5733,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 0,
     "url": "/api/equipment/stabling-1-day",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -6597,18 +5753,14 @@
       "name": "Arcane Foci",
       "url": "/api/equipment-categories/arcane-foci"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 4,
     "desc": [
       "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
     ],
     "url": "/api/equipment/staff",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -6624,18 +5776,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "A 10-foot length of string, typically found in a burglar's pack."
     ],
     "url": "/api/equipment/string-10-feet",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "desc": [],
@@ -6655,14 +5803,10 @@
     "str_minimum": 0,
     "stealth_disadvantage": false,
     "weight": 13,
-    "cost": {
-      "quantity": 45,
-      "unit": "gp"
-    },
+    "cost": 45,
     "url": "/api/equipment/studded-leather-armor",
     "contents": [],
-    "properties": [],
-    "price": 45
+    "properties": []
   },
   {
     "special": [],
@@ -6678,18 +5822,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "weight": 20,
     "desc": [
       "A simple and portable canvas shelter, a tent sleeps two."
     ],
     "url": "/api/equipment/tent-two-person",
     "contents": [],
-    "properties": [],
-    "price": 2
+    "properties": []
   },
   {
     "special": [],
@@ -6701,18 +5841,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Other Tools",
-    "cost": {
-      "quantity": 25,
-      "unit": "gp"
-    },
+    "cost": 25,
     "weight": 1,
     "desc": [
       "This set of tools includes a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers. Proficiency with these tools lets you add your proficiency bonus to any ability checks you make to disarm traps or open locks."
     ],
     "url": "/api/equipment/thieves-tools",
     "contents": [],
-    "properties": [],
-    "price": 25
+    "properties": []
   },
   {
     "special": [],
@@ -6728,10 +5864,7 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "sp"
-    },
+    "cost": 0.5,
     "weight": 1,
     "desc": [
       "This small container holds flint, fire steel, and tinder (usually dry cloth soaked in light oil) used to kindle a fire. Using it to light a torch--or anything else with abundant, exposed fuel--takes an action.",
@@ -6739,8 +5872,7 @@
     ],
     "url": "/api/equipment/tinderbox",
     "contents": [],
-    "properties": [],
-    "price": 0.5
+    "properties": []
   },
   {
     "special": [],
@@ -6752,18 +5884,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 50,
-      "unit": "gp"
-    },
+    "cost": 50,
     "weight": 10,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/tinkers-tools",
     "contents": [],
-    "properties": [],
-    "price": 50
+    "properties": []
   },
   {
     "special": [],
@@ -6779,18 +5907,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "cp"
-    },
+    "cost": 0.01,
     "weight": 1,
     "desc": [
       "A torch burns for 1 hour, providing bright light in a 20-foot radius and dim light for an additional 20 feet. If you make a melee attack with a burning torch and hit, it deals 1 fire damage."
     ],
     "url": "/api/equipment/torch",
     "contents": [],
-    "properties": [],
-    "price": 0.01
+    "properties": []
   },
   {
     "special": [],
@@ -6806,18 +5930,14 @@
       "name": "Druidic Foci",
       "url": "/api/equipment-categories/druidic-foci"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 0,
     "desc": [
       "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
     ],
     "url": "/api/equipment/totem",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -6832,10 +5952,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "damage": {
       "damage_dice": "1d6",
       "damage_type": {
@@ -6873,8 +5990,7 @@
       }
     },
     "url": "/api/equipment/trident",
-    "contents": [],
-    "price": 5
+    "contents": []
   },
   {
     "special": [],
@@ -6890,18 +6006,14 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 0,
-      "unit": "cp"
-    },
+    "cost": 0,
     "weight": 0,
     "desc": [
       "Religious clothing, typically found in a priest's pack."
     ],
     "url": "/api/equipment/vestments",
     "contents": [],
-    "properties": [],
-    "price": 0
+    "properties": []
   },
   {
     "desc": [],
@@ -6918,15 +6030,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 0,
     "url": "/api/equipment/vial",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -6938,18 +6046,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Musical Instrument",
-    "cost": {
-      "quantity": 30,
-      "unit": "gp"
-    },
+    "cost": 30,
     "weight": 1,
     "desc": [
       "Several of the most common types of musical instruments are shown on the table as examples. If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus. Each type of musical instrument requires a separate proficiency."
     ],
     "url": "/api/equipment/viol",
     "contents": [],
-    "properties": [],
-    "price": 30
+    "properties": []
   },
   {
     "desc": [],
@@ -6962,15 +6066,11 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Tack, Harness, and Drawn Vehicles",
-    "cost": {
-      "quantity": 35,
-      "unit": "gp"
-    },
+    "cost": 35,
     "weight": 400,
     "url": "/api/equipment/wagon",
     "contents": [],
-    "properties": [],
-    "price": 35
+    "properties": []
   },
   {
     "special": [],
@@ -6986,18 +6086,14 @@
       "name": "Arcane Foci",
       "url": "/api/equipment-categories/arcane-foci"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 1,
     "desc": [
       "An arcane focus is a special item--an orb, a crystal, a rod, a specially constructed staff, a wand-like length of wood, or some similar item--designed to channel the power of arcane spells. A sorcerer, warlock, or wizard can use such an item as a spellcasting focus."
     ],
     "url": "/api/equipment/wand",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   },
   {
     "desc": [],
@@ -7012,10 +6108,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -7030,8 +6123,7 @@
     "weight": 2,
     "properties": [],
     "url": "/api/equipment/war-pick",
-    "contents": [],
-    "price": 5
+    "contents": []
   },
   {
     "desc": [],
@@ -7046,10 +6138,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 15,
-      "unit": "gp"
-    },
+    "cost": 15,
     "damage": {
       "damage_dice": "1d8",
       "damage_type": {
@@ -7078,8 +6167,7 @@
       }
     },
     "url": "/api/equipment/warhammer",
-    "contents": [],
-    "price": 15
+    "contents": []
   },
   {
     "desc": [],
@@ -7092,10 +6180,7 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Mounts and Other Animals",
-    "cost": {
-      "quantity": 400,
-      "unit": "gp"
-    },
+    "cost": 400,
     "speed": {
       "quantity": 60,
       "unit": "ft/round"
@@ -7103,8 +6188,7 @@
     "capacity": "540 lb.",
     "url": "/api/equipment/warhorse",
     "contents": [],
-    "properties": [],
-    "price": 400
+    "properties": []
   },
   {
     "desc": [],
@@ -7117,18 +6201,14 @@
       "url": "/api/equipment-categories/mounts-and-vehicles"
     },
     "vehicle_category": "Waterborne Vehicles",
-    "cost": {
-      "quantity": 25000,
-      "unit": "gp"
-    },
+    "cost": 25000,
     "speed": {
       "quantity": 2.5,
       "unit": "mph"
     },
     "url": "/api/equipment/warship",
     "contents": [],
-    "properties": [],
-    "price": 25000
+    "properties": []
   },
   {
     "desc": [],
@@ -7145,15 +6225,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 2,
-      "unit": "sp"
-    },
+    "cost": 0.2,
     "weight": 5,
     "url": "/api/equipment/waterskin",
     "contents": [],
-    "properties": [],
-    "price": 0.2
+    "properties": []
   },
   {
     "special": [],
@@ -7165,18 +6241,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/weavers-tools",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "desc": [],
@@ -7193,15 +6265,11 @@
       "name": "Standard Gear",
       "url": "/api/equipment-categories/standard-gear"
     },
-    "cost": {
-      "quantity": 1,
-      "unit": "cp"
-    },
+    "cost": 0.01,
     "weight": 1,
     "url": "/api/equipment/whetstone",
     "contents": [],
-    "properties": [],
-    "price": 0.01
+    "properties": []
   },
   {
     "desc": [],
@@ -7216,10 +6284,7 @@
     "weapon_category": "Martial",
     "weapon_range": "Melee",
     "category_range": "Martial Melee",
-    "cost": {
-      "quantity": 2,
-      "unit": "gp"
-    },
+    "cost": 2,
     "damage": {
       "damage_dice": "1d4",
       "damage_type": {
@@ -7245,8 +6310,7 @@
       }
     ],
     "url": "/api/equipment/whip",
-    "contents": [],
-    "price": 2
+    "contents": []
   },
   {
     "special": [],
@@ -7258,18 +6322,14 @@
       "url": "/api/equipment-categories/tools"
     },
     "tool_category": "Artisan's Tools",
-    "cost": {
-      "quantity": 1,
-      "unit": "gp"
-    },
+    "cost": 1,
     "weight": 5,
     "desc": [
       "These special tools include the items needed to pursue a craft or trade. The table shows examples of the most common types of tools, each providing items related to a single craft. Proficiency with a set of artisan's tools lets you add your proficiency bonus to any ability checks you make using the tools in your craft. Each type of artisan's tools requires a separate proficiency."
     ],
     "url": "/api/equipment/woodcarvers-tools",
     "contents": [],
-    "properties": [],
-    "price": 1
+    "properties": []
   },
   {
     "special": [],
@@ -7285,18 +6345,14 @@
       "name": "Druidic Foci",
       "url": "/api/equipment-categories/druidic-foci"
     },
-    "cost": {
-      "quantity": 5,
-      "unit": "gp"
-    },
+    "cost": 5,
     "weight": 4,
     "desc": [
       "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
     ],
     "url": "/api/equipment/wooden-staff",
     "contents": [],
-    "properties": [],
-    "price": 5
+    "properties": []
   },
   {
     "special": [],
@@ -7312,17 +6368,13 @@
       "name": "Druidic Foci",
       "url": "/api/equipment-categories/druidic-foci"
     },
-    "cost": {
-      "quantity": 10,
-      "unit": "gp"
-    },
+    "cost": 10,
     "weight": 1,
     "desc": [
       "A druidic focus might be a sprig of mistletoe or holly, a wand or scepter made of yew or another special wood, a staff drawn whole out of a living tree, or a totem object incorporating feathers, fur, bones, and teeth from sacred animals. A druid can use such an object as a spellcasting focus."
     ],
     "url": "/api/equipment/yew-wand",
     "contents": [],
-    "properties": [],
-    "price": 10
+    "properties": []
   }
 ]
