@@ -226,16 +226,15 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         } else {
         optionsBox.style.display = 'none';
         filter.options.forEach((o, subIndex) => {
-          Object.assign(filterChoice[filter.index], {[o.category]: {}}) // or {value: 0, operation: ''}. Probably either will work, but maybe one will work better.
+          Object.assign(filterChoice[filter.index], {[o.category]: {}});
         });
         display();
       }});
 
-      let firstClick = true
       filterChoice[filter.index] = {}
 
       filter.options.forEach((o, subIndex) => {
-        Object.assign(filterChoice[filter.index], {[o.category]: {}})
+        Object.assign(filterChoice[filter.index], {[o.category]: {}});
 
         const option = document.createElement('div');
         option.id = `option-${index}-${subIndex}`;
@@ -263,14 +262,12 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionOperator.addEventListener('change', () => {
           filterChoice[filter.index][o.category] = 
             {value: optionValue.value, operation: optionOperator.value};
-          firstClick = false
           display();
         });
 
         optionValue.addEventListener('input', () => {
           filterChoice[filter.index][o.category] = 
             {value: optionValue.value, operation: optionOperator.value};
-          firstClick = false
           display();
 
         });
