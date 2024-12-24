@@ -6,10 +6,10 @@ const spells = await fetch('./spells.json')
     if (!response.ok) {
       throw new Error('Failed to load JSON:', response.statusText);
     }
-    return response.json()
+    return response.json();
   });
 
-const filterChoice = {}
+const filterChoice = {};
 
 const filterOptions = [
   {title: 'Name:', index: 'name', type: 'search'},
