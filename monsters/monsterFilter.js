@@ -93,6 +93,8 @@ return monsters
 }
 
 // Legendary actions and legendary resistances don't work.
+// There's an error in get_monsters that sets every monster's legendary_actions to 'Y' and every monster's legendary_resistances to 'N'.
+// Caster, in contrast, does.
 //
 // Speed doesn't work: number >= undefined always returns false, so all categories of speed must be set to 0.
 // This is probably a job for createFilterBox
