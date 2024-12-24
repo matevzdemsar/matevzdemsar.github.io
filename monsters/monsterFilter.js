@@ -62,21 +62,21 @@ export function monsterFilter (
 } = {}) {
 return monsters
     .filter((m) => !name || m.index.includes(name.toLowerCase().replace("-", " "))
-    && !type || (m.type === type)
-    && (!challenge_rating || challenge_rating.includes(m.challenge_rating))
-    && (!armor_class || operatorChoice(m.armor_class,
-        armor_class.armor_class.value, armor_class.armor_class.operation))
-    && (!hit_points || operatorChoice(m.hit_points,
-        hit_points.hit_points.value, hit_points.hit_points.operation))
+    && !type.length || (m.type === type)
+    && (!challenge_rating.length || challenge_rating.includes(m.challenge_rating))
+    && (operatorChoice(m.armor_class, armor_class.armor_class.value,
+        armor_class.armor_class.operation))
+    && (operatorChoice(m.hit_points, hit_points.hit_points.value,
+        hit_points.hit_points.operation))
     && (Object.keys(speed).every((key) =>
-      operatorChoice(m.speed[key].value, speed[key].value, speed[key].operation)))
-    && (!damage_vulnerabilities || damage_vulnerabilities.every((v) =>
+        operatorChoice(m.speed[key].value, speed[key].value, speed[key].operation)))
+    && (!damage_vulnerabilities.length || damage_vulnerabilities.every((v) =>
       m.damage_vulnerabilities.includes(v)))
-    && (!damage_resistances || damage_resistances.every((r) =>
+    && (!damage_resistances.length || damage_resistances.every((r) =>
       m.damage_resistances.includes(r)))
-    && (!damage_immunities || damage_immunities.every((i) =>
+    && (!damage_immunities.length || damage_immunities.every((i) =>
       m.damage_immunities.includes(i)))
-    && (!condition_immunities || condition_immunities.every((c) =>
+    && (!condition_immunities.length || condition_immunities.every((c) =>
       m.condition_immunities.includes(c)))
     && (!caster || (m.caster === caster))
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
@@ -84,4 +84,8 @@ return monsters
     && (Object.keys(ability_scores).every((key) =>
       operatorChoice(m.ability_scores[key].value, ability_scores[key].value,
         ability_scores[key].operation))));
+    // You'll need to convert the filter values to numbers when dealing with operators,
+    // becuase they're probably strings.
 }
+
+// Adjust the filters, it seems that most of them don't work. In fact none of the do.

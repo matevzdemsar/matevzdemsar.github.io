@@ -20,10 +20,19 @@ const filterOptions = [
   {title: 'Challenge rating:', index: 'challenge_rating', type: 'checkbox',
     options: [0, 1/8, 1/4, 1/2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
       14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]},
-  {title: 'Vulnerabilities:', index: 'damage_vulnerabilities', type: 'checkbox', options: []},
-  {title: 'Resistances:', index: 'damage_resistances', type: 'checkbox', options: []},
-  {title: 'Immunities:', index: 'damage_immunities', type: 'checkbox', options: []},
-  {title: 'Conditional immunities:', index: 'condition_immunities', type: 'checkbox', options: []},
+  {title: 'Vulnerabilities:', index: 'damage_vulnerabilities', type: 'checkbox',
+    options: ['bludgeoning', 'piercing', 'slashing', 'fire', 'force',
+    'cold', 'lightning', 'thunder', 'acid', 'poison', 'necrotic', 'radiant', 'psychic']},
+  {title: 'Resistances:', index: 'damage_resistances', type: 'checkbox',
+    options: ['bludgeoning', 'piercing', 'slashing', 'fire', 'force',
+    'cold', 'lightning', 'thunder', 'acid', 'poison', 'necrotic', 'radiant', 'psychic']},
+  {title: 'Immunities:', index: 'damage_immunities', type: 'checkbox',
+    options: ['bludgeoning', 'piercing', 'slashing', 'fire', 'force',
+    'cold', 'lightning', 'thunder', 'acid', 'poison', 'necrotic', 'radiant', 'psychic']},
+  {title: 'Conditional immunities:', index: 'condition_immunities', type: 'checkbox',
+    options: ['charmed', 'frightened', 'grappled', 'paralyzed', 'prone',
+    'grappled', 'restrained', 'petrified', 'stunned', 'incapacitated',
+    'deafened', 'blinded', 'poisoned', 'exhaustion']},
   {title: 'Spellcaster:', index: 'caster', type: 'radio', options: ['Y', 'N']},
   {title: 'Legendary resistances:', index: 'legendary_resistances', type: 'radio', options: ['Y', 'N']},
   {title: 'Legendary actions:', index: 'legendary_actions', type: 'radio', options: ['Y', 'N']},
@@ -40,8 +49,8 @@ const filterOptions = [
     {category: 'dex', c_name: 'DEX:'},
     {category: 'con', c_name: 'CON:'},
     {category: 'int', c_name: 'INT:'},
-    {category: 'wis', c_name: 'WIS'},
-    {category: 'cha', c_name: 'CHA'}]}
+    {category: 'wis', c_name: 'WIS:'},
+    {category: 'cha', c_name: 'CHA:'}]}
 ];
 
 function displayMonsters() {
