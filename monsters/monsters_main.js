@@ -45,12 +45,12 @@ const filterOptions = [
     {category: 'climb', c_name: 'Climbing:'},
     {category: 'burrow', c_name: 'Burrowing:'}]},
   {title: 'Ability scores:', index: 'ability_scores', type: 'operator', options: [
-    {category: 'str', c_name: 'STR:'},
-    {category: 'dex', c_name: 'DEX:'},
-    {category: 'con', c_name: 'CON:'},
-    {category: 'int', c_name: 'INT:'},
-    {category: 'wis', c_name: 'WIS:'},
-    {category: 'cha', c_name: 'CHA:'}]}
+    {category: 'strength', c_name: 'STR:'},
+    {category: 'dexterity', c_name: 'DEX:'},
+    {category: 'constitution', c_name: 'CON:'},
+    {category: 'intelligence', c_name: 'INT:'},
+    {category: 'wisdom', c_name: 'WIS:'},
+    {category: 'charisma', c_name: 'CHA:'}]}
 ];
 
 function displayMonsters() {

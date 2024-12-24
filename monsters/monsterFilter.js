@@ -52,24 +52,30 @@ export function monsterFilter (
   condition_immunities = [],
   caster = false,
   spells = false,
+  legendary_resistances = false,
   legendary_actions = false,
-  ability_scores = {str: {value: 0, operation: ">="},
-      dex: {value: 0, operation: ">="},
-      con: {value: 0, operation: ">="},
-      int: {value: 0, operation: ">="},
-      wis: {value: 0, operation: ">="},
-      cha: {value: 0, operation: ">="}}
+  ability_scores = {strength: {value: 0, operation: ">="},
+      dexterity: {value: 0, operation: ">="},
+      constitution: {value: 0, operation: ">="},
+      intelligence: {value: 0, operation: ">="},
+      wisdom: {value: 0, operation: ">="},
+      charisma: {value: 0, operation: ">="}}
 } = {}) {
+    // console.log(legendary_actions);
+    // console.log(legendary_resistances);
+    // console.log(speed);
 return monsters
-    .filter((m) => !name || m.index.includes(name.toLowerCase().replace("-", " "))
-    && !type.length || (m.type === type)
+    .filter((m) => (!name || m.index.includes(name.toLowerCase().replace("-", " ")))
+    && (!type.length || type.includes(m.type))
     && (!challenge_rating.length || challenge_rating.includes(m.challenge_rating))
-    && (operatorChoice(m.armor_class, armor_class.armor_class.value,
+    && (operatorChoice(m.armor_class, Number(armor_class.armor_class.value),
         armor_class.armor_class.operation))
-    && (operatorChoice(m.hit_points, hit_points.hit_points.value,
+    && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
         hit_points.hit_points.operation))
-    && (Object.keys(speed).every((key) =>
-        operatorChoice(m.speed[key].value, speed[key].value, speed[key].operation)))
+    && (Object.keys(speed).every((key) => {
+        if (!Object.keys(m.speed).includes(key)) {m.speed[key] = 0}
+      return operatorChoice(m.speed[key].value, Number(speed[key].value), speed[key].operation)
+      }))
     && (!damage_vulnerabilities.length || damage_vulnerabilities.every((v) =>
       m.damage_vulnerabilities.includes(v)))
     && (!damage_resistances.length || damage_resistances.every((r) =>
@@ -82,10 +88,11 @@ return monsters
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
-      operatorChoice(m.ability_scores[key].value, ability_scores[key].value,
+      operatorChoice(m.key, ability_scores[key].value,
         ability_scores[key].operation))));
-    // You'll need to convert the filter values to numbers when dealing with operators,
-    // becuase they're probably strings.
 }
 
-// Adjust the filters, it seems that most of them don't work. In fact none of the do.
+// Legendary actions and legendary resistances don't work.
+//
+// Speed doesn't work: number >= undefined always returns false, so all categories of speed must be set to 0.
+// This is probably a job for createFilterBox
