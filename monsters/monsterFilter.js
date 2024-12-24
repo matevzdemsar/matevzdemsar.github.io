@@ -68,7 +68,7 @@ return monsters
     .filter((m) => (!name || m.index.includes(name.toLowerCase().replace("-", " ")))
     && (!type.length || type.includes(m.type))
     && (!challenge_rating.length || challenge_rating.includes(m.challenge_rating))
-    && (operatorChoice(m.armor_class, Number(armor_class.armor_class.value),
+    && (operatorChoice(m.armor_class[0].value, Number(armor_class.armor_class.value),
         armor_class.armor_class.operation))
     && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
         hit_points.hit_points.operation))
@@ -88,7 +88,7 @@ return monsters
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
-      operatorChoice(m.key, ability_scores[key].value,
+      operatorChoice(m.speed.key, ability_scores[key].value,
         ability_scores[key].operation))));
 }
 
