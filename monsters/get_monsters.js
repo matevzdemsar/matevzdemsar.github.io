@@ -16,7 +16,7 @@ import { changeInObject, yes_no } from '../motherfunctions.js';
             .map((m) => (
                 {...m,
                 legendary_resistances: yes_no(m.special_abilities?.some((obj) =>
-                    obj.name === "Legendary Resistances"))
+                    (obj.name === "Legendary Resistance")))
                 }))
                 .map((m) => changeInObject(m, "legendary_actions", (arr) => yes_no(arr.length)))
         
@@ -31,5 +31,5 @@ import { changeInObject, yes_no } from '../motherfunctions.js';
         // legendary_resistances: "Y"|"N"
 
     writeFileSync('monsters.json', JSON.stringify(monstersForFilter, null, 2));
-    // writeFileSync('monsters.json', JSON.stringify(monsters, null, 2));
+    writeFileSync('monsters_original.json', JSON.stringify(monsters, null, 2));
 }) ();
