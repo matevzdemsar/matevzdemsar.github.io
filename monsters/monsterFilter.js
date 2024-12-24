@@ -45,7 +45,7 @@ export function monsterFilter (
       swim: {value: 0, operation: ">="},
       fly: {value: 0, operation: ">="},
       climb: {value: 0, operation: ">="},
-      burrow: {value: 0, operation: ">="}} = {},
+      burrow: {value: 0, operation: ">="}},
   damage_vulnerabilities = [],
   damage_resistances = [],
   damage_immunities = [],
@@ -58,14 +58,16 @@ export function monsterFilter (
       con: {value: 0, operation: ">="},
       int: {value: 0, operation: ">="},
       wis: {value: 0, operation: ">="},
-      cha: {value: 0, operation: ">="}} = {}
+      cha: {value: 0, operation: ">="}}
 } = {}) {
 return monsters
-    .filter((m) => !name || m.index.includes(name.toLowerCase().replace("-", " ")))
+    .filter((m) => !name || m.index.includes(name.toLowerCase().replace("-", " "))
     && !type || (m.type === type)
     && (!challenge_rating || challenge_rating.includes(m.challenge_rating))
-    && (!armor_class || operatorChoice(m.armor_class, armor_class.value, armor_class.operation))
-    && (!hit_points || operatorChoice(m.hit_points, hit_points.value, hit_points.operation))
+    && (!armor_class || operatorChoice(m.armor_class,
+        armor_class.armor_class.value, armor_class.armor_class.operation))
+    && (!hit_points || operatorChoice(m.hit_points,
+        hit_points.hit_points.value, hit_points.hit_points.operation))
     && (Object.keys(speed).every((key) =>
       operatorChoice(m.speed[key].value, speed[key].value, speed[key].operation)))
     && (!damage_vulnerabilities || damage_vulnerabilities.every((v) =>
@@ -81,5 +83,5 @@ return monsters
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
       operatorChoice(m.ability_scores[key].value, ability_scores[key].value,
-        ability_scores[key].operation)));
+        ability_scores[key].operation))));
 }
