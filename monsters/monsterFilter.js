@@ -73,22 +73,22 @@ return monsters
     && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
         hit_points.hit_points.operation))
     && (Object.keys(speed).every((key) => {
-        if (!Object.keys(m.speed).includes(key)) {m.speed[key] = 0}
-      return operatorChoice(m.speed[key].value, Number(speed[key].value), speed[key].operation)
+        if (!Object.keys(m.speed).includes(key)) {m.speed[key] = "0 ft."};
+      return operatorChoice(Number(m.speed[key].split(' ')[0]), Number(speed[key].value), speed[key].operation);
       }))
     && (!damage_vulnerabilities.length || damage_vulnerabilities.every((v) =>
-      m.damage_vulnerabilities.includes(v)))
+      m.damage_vulnerabilities.join("").includes(v)))
     && (!damage_resistances.length || damage_resistances.every((r) =>
-      m.damage_resistances.includes(r)))
+      m.damage_resistances.join("").includes(r)))
     && (!damage_immunities.length || damage_immunities.every((i) =>
-      m.damage_immunities.includes(i)))
+      m.damage_immunities.join("").includes(i)))
     && (!condition_immunities.length || condition_immunities.every((c) =>
-      m.condition_immunities.includes(c)))
+        m.condition_immunities.map((obj) => obj.index).includes(c))) // Immunities are stored in object under the property "index" because of course they are.
     && (!caster || (m.caster === caster))
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
-      operatorChoice(m.speed.key, ability_scores[key].value,
+       operatorChoice(m[key], ability_scores[key].value,
         ability_scores[key].operation))));
 }
 
