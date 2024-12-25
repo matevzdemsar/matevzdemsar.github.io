@@ -77,13 +77,13 @@ return monsters
       return operatorChoice(Number(m.speed[key].split(' ')[0]), Number(speed[key].value), speed[key].operation);
       }))
     && (!damage_vulnerabilities.length || damage_vulnerabilities.every((v) =>
-      m.damage_vulnerabilities.join("").includes(v)))
+      m.damage_vulnerabilities.join("").includes(v.toLowerCase())))
     && (!damage_resistances.length || damage_resistances.every((r) =>
-      m.damage_resistances.join("").includes(r)))
+      m.damage_resistances.join("").includes(r.toLowerCase())))
     && (!damage_immunities.length || damage_immunities.every((i) =>
-      m.damage_immunities.join("").includes(i)))
+      m.damage_immunities.join("").includes(i.toLowerCase())))
     && (!condition_immunities.length || condition_immunities.every((c) =>
-        m.condition_immunities.map((obj) => obj.index).includes(c))) // Immunities are stored in object under the property "index" because of course they are.
+        m.condition_immunities.map((obj) => obj.index).includes(c.toLowerCase()))) // Immunities are stored in object under the property "index" because of course they are.
     && (!caster || (m.caster === caster))
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
