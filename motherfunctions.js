@@ -99,7 +99,20 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     const optionsBox = document.createElement('div');
 
     if(filter.type === 'checkbox') {
+      createCheckbox();
+    } else if (filter.type === 'search') {
+      createSearchbar();
+    } else if (filter.type === 'radio') {
+      createRadio();
+    } else if (filter.type === 'operator') {
+      createOperator();
+    }
 
+    div.appendChild(optionsBox)
+    optionsBox.style.display = 'none';
+    filterBox.appendChild(div);
+
+    function createCheckbox () {
       const checkboxStates = [];
 
       checkbox.addEventListener('change', () => {
@@ -146,9 +159,10 @@ export function createFilterBox(filterOptions, filterChoice, display) {
           optionsBox.appendChild(option);
           optionsBox.appendChild(optionLabel);
 
-      })
+      });
+    };
 
-    } else if (filter.type === 'search') {
+    function createSearchbar () {
       const searchBar = document.createElement('input');
       searchBar.type = 'search'
 
@@ -169,9 +183,9 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       })
 
       optionsBox.appendChild(searchBar);
+    };
 
-    } else if (filter.type === 'radio') {
-
+    function createRadio() {
       let lastChecked = false;
 
       filter.options.forEach((o, subIndex) => {
@@ -214,10 +228,11 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     
           optionsBox.appendChild(option);
           optionsBox.appendChild(optionLabel);
-          })
-        })
-    } else if (filter.type === 'operator') {
+          });
+        });
+    };
 
+    function createOperator() {
       checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
         optionsBox.style.display = 'block'
@@ -279,9 +294,6 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionsBox.appendChild(option);
 
       });
-    }
-    div.appendChild(optionsBox)
-    optionsBox.style.display = 'none';
-    filterBox.appendChild(div);
+    };
   });
 }

@@ -1,5 +1,5 @@
 
-import { operatorChoice } from "../motherfunctions";
+import { operatorChoice } from "../motherfunctions.js";
 
 /**
  * 
@@ -16,9 +16,9 @@ import { operatorChoice } from "../motherfunctions";
  * @returns {race[]}
  */
 
-function raceFilter ({
+export function raceFilter (
     races,
-    name = false,
+    {name = false,
     asi = false,
     speed = {walk: {value: 0, operation: ">="},
             swim: {value: 0, operation: ">="},
@@ -26,8 +26,8 @@ function raceFilter ({
             climb: {value: 0, operation: ">="},
             burrow: {value: 0, operation: ">="}}} = {}) {
     return races
-        .filter((r) => !name || r.index.includes(name.toLowerCase().replace("-", " ")))
+        .filter((r) => !name || r.index.includes(name.toLowerCase().replace("-", " "))
         && (!asi || r.asi.includes(asi))
         && (Object.keys().every(
-            key => operatorChoice(r.speed[key].value, speed[key].value, speed[key].operation)));
+            key => operatorChoice(r.speed[key].value, speed[key].value, speed[key].operation))));
 }
