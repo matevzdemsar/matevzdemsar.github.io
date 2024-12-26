@@ -60,16 +60,14 @@ export function operatorChoice(num1, num2, op) {
 // }
 
 // Function to show the popup
-export function showPopup() {
-    const popup = document.getElementById('popup');
+export function showPopup(popup) {
     if (popup) {
         popup.style.display = 'block';
     }
 }
 
 // Function to hide the popup
-export function hidePopup() {
-    const popup = document.getElementById(`popup`);
+export function hidePopup(popup) {
     if (popup) {
         popup.style.display = 'none';
     }

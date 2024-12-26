@@ -1,5 +1,5 @@
 import { monsterFilter } from "./monsterFilter.js";
-import { createFilterBox } from "../motherfunctions.js";
+import { createFilterBox, showPopup, hidePopup } from "../motherfunctions.js";
 
 const monsters = await fetch('./monsters.json')
   .then((response) => {
@@ -18,8 +18,9 @@ const filterOptions = [
     'elemental', 'fey', 'fiend', 'giant', 'humanoid', 'monstrosity',
     'ooze', 'plant', 'undead']},
   {title: 'Challenge rating:', index: 'challenge_rating', type: 'checkbox',
-    options: [0, 1/8, 1/4, 1/2, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
-      14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30]},
+    options: ['0', '1/8', '1/4', '1/2', '1', '2', '3', '4', '5', '6', '7', '8',
+    '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',
+    '22', '23', '24', '25', '26', '27', '28', '29', '30']},
   {title: 'Vulnerabilities:', index: 'damage_vulnerabilities', type: 'checkbox',
     options: ['Bludgeoning', 'Piercing', 'Slashing', 'Fire', 'Force',
     'Cold', 'Lightning', 'Thunder', 'Acid', 'Poison', 'Necrotic', 'Radiant', 'Psychic']},
@@ -55,15 +56,41 @@ const filterOptions = [
 
 function displayMonsters() {
   container.innerHTML = '';
-  document.querySelectorAll('.popup').forEach(popup => popup.remove());
+
+  const popup = document.getElementById('monster_popup');
+
+  popup.className = 'monster_popup';
+  popup.style.display = 'none';
+  popup.style.position = 'fixed';
+  popup.style.top = '50%';
+  popup.style.left = '50%';
+  popup.style.transform = 'translate(-50%, -50%)';
+  popup.style.border = '1px solid black';
+  popup.style.padding = '20px';
+  popup.style.backgroundColor = 'white';
+  popup.style.zIndex = '1000';
+
+  document.body.appendChild(popup);
   const filteredMonsters = monsterFilter(monsters, filterChoice);
 
   console.log(filteredMonsters)
   filteredMonsters.forEach((monster) => {
     const div = document.createElement('div');
     div.textContent = monster.name;
-    container.appendChild(div);
-  })
+    div.description = monster.name;
+    // TO-DO: Add moster description, image? etc.
+
+    div.addEventListener('click', () => {
+      console.log(div.description);
+      showPopup(popup);
+      popup.innerHTML =
+      `<p>${div.description}</p>
+      <button id="close-popup">Close</button>`;
+      const closeButton = document.getElementById('close-popup');
+      closeButton.addEventListener('click', () => hidePopup(popup));
+})
+container.appendChild(div);
+})
 }
 
 createFilterBox(filterOptions, filterChoice, displayMonsters);

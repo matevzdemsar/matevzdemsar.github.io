@@ -36,12 +36,10 @@ const filterOptions = [
 function displaySpells() {
 
   container.innerHTML = '';
-  // document.querySelectorAll('.spell_popup').forEach(popup => popup.remove());
   const filteredSpells = spellFilter(spells, filterChoice);
 
-  const popup = document.getElementById('popup');
+  const popup = document.getElementById('spell_popup');
 
-  popup.id = `popup`;
   popup.className = 'spell_popup';
   popup.style.display = 'none';
   popup.style.position = 'fixed';
@@ -52,7 +50,7 @@ function displaySpells() {
   popup.style.padding = '20px';
   popup.style.backgroundColor = 'white';
   popup.style.zIndex = '1000';
-  // Move this to the CSS file when you make it.
+  // TO-DO: Move this to the CSS file when you make it.
 
   document.body.appendChild(popup);
 
@@ -60,17 +58,17 @@ function displaySpells() {
     const div = document.createElement('div');
     div.textContent = spell.name;
     div.description = spell.desc;
-    // Add things like spell level, classes etc. to this.
+    // TO-DO: Add things like spell level, classes etc. to this.
 
    container.appendChild(div);
 
    div.addEventListener('click', (event) => {
-    showPopup();
+    showPopup(popup);
     popup.innerHTML =
     `<p>${div.description}</p>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
-    closeButton.addEventListener('click', () => hidePopup());
+    closeButton.addEventListener('click', () => hidePopup(popup));
   });
 
   });
