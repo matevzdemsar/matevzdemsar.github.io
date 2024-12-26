@@ -36,43 +36,43 @@ const filterOptions = [
 function displaySpells() {
 
   container.innerHTML = '';
-  document.querySelectorAll('.popup').forEach(popup => popup.remove());
+  // document.querySelectorAll('.spell_popup').forEach(popup => popup.remove());
   const filteredSpells = spellFilter(spells, filterChoice);
+
+  const popup = document.getElementById('popup');
+
+  popup.id = `popup`;
+  popup.className = 'spell_popup';
+  popup.style.display = 'none';
+  popup.style.position = 'fixed';
+  popup.style.top = '50%';
+  popup.style.left = '50%';
+  popup.style.transform = 'translate(-50%, -50%)';
+  popup.style.border = '1px solid black';
+  popup.style.padding = '20px';
+  popup.style.backgroundColor = 'white';
+  popup.style.zIndex = '1000';
+  // Move this to the CSS file when you make it.
+
+  document.body.appendChild(popup);
 
   filteredSpells.forEach((spell, index) => {
     const div = document.createElement('div');
     div.textContent = spell.name;
+    div.description = spell.desc;
+    // Add things like spell level, classes etc. to this.
 
-    div.addEventListener('click', () => {
-      showPopup(index);
-    });
+   container.appendChild(div);
 
-    container.appendChild(div);
+   div.addEventListener('click', (event) => {
+    showPopup();
+    popup.innerHTML =
+    `<p>${div.description}</p>
+    <button id="close-popup">Close</button>`;
+    const closeButton = document.getElementById('close-popup');
+    closeButton.addEventListener('click', () => hidePopup());
+  });
 
-    const popup = document.createElement('div');
-    popup.id = `popup-${index}`;
-    popup.className = 'popup';
-    popup.style.display = 'none';
-    popup.style.position = 'fixed';
-    popup.style.top = '50%';
-    popup.style.left = '50%';
-    popup.style.transform = 'translate(-50%, -50%)';
-    popup.style.border = '1px solid black';
-    popup.style.padding = '20px';
-    popup.style.backgroundColor = 'white';
-    popup.style.zIndex = '1000';
-
-    const description = spell.desc.join(' ')
-
-    popup.innerHTML = `
-    <p>${description}</p>
-    <button id="close-${index}">Close</button>
-    `;                // Add things like spell level, classes etc. to this.
-
-    const closeButton = popup.querySelector(`#close-${index}`);
-    closeButton.addEventListener('click', () => hidePopup(index));
-
-    document.body.appendChild(popup);
   });
 }
 

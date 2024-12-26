@@ -52,25 +52,24 @@ export function operatorChoice(num1, num2, op) {
     }
 }
 
-export function closeAllPopups() {
-    const allPopups = document.querySelectorAll('[id^="popup-"]');
-    allPopups.forEach((popup) => {
-        popup.style.display = "none";
-    })
-}
+// export function closeAllPopups() {
+//     const allPopups = document.querySelectorAll('[id^="popup-"]');
+//     allPopups.forEach((popup) => {
+//         popup.style.display = "none";
+//     })
+// }
 
 // Function to show the popup
-export function showPopup(index) {
-    closeAllPopups();
-    const popup = document.getElementById(`popup-${index}`);
+export function showPopup() {
+    const popup = document.getElementById('popup');
     if (popup) {
         popup.style.display = 'block';
     }
 }
 
 // Function to hide the popup
-export function hidePopup(index) {
-    const popup = document.getElementById(`popup-${index}`);
+export function hidePopup() {
+    const popup = document.getElementById(`popup`);
     if (popup) {
         popup.style.display = 'none';
     }
