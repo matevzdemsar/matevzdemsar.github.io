@@ -39,6 +39,11 @@ function displaySpells() {
   const filteredSpells = spellFilter(spells, filterChoice);
 
   const popup = document.getElementById('spell_popup');
+  document.addEventListener('keydown', (event) => {
+    console.log(event.key)
+    if (event.key === 'Escape')
+      hidePopup(popup);
+  })
 
   popup.className = 'spell_popup';
   popup.style.display = 'none';
@@ -57,7 +62,7 @@ function displaySpells() {
     spell_info.classList.add('spell_info');
     spell_info.innerHTML =
     `Level: ${spell.level}<br>
-    Casting time: ${spell.casting_time.replace('bonus action', 'bonus a.')}<br>
+    Casting time: ${spell.casting_time}<br>
     Range: ${spell.range}`;
     div.appendChild(spell_info);
 
@@ -65,10 +70,11 @@ function displaySpells() {
 
    container.appendChild(div);
 
-   div.addEventListener('click', (event) => {
+   div.addEventListener('click', () => {
     showPopup(popup);
     popup.innerHTML =
-    `<p>${spell.desc.join(" ")}</p>
+    `<h3>${spell.name}</h3>
+    <p>${spell.desc.join(" ")}</p>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));
