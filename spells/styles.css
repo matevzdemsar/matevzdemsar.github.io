@@ -1,12 +1,20 @@
 .spell_popup {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  /* top: 50%;
   transform: translate(-50%, -50%);
+  left: 50%; */
+  top: 0;
+  right: 0;
+  width: 750px;
+  height: 100%;
   border: 1px solid black;
   padding: 20px;
   background-color: white;
   z-index: 1000;
+}
+
+.spell_popup h3 {
+    display: inline;
 }
 
 .spell {
@@ -30,4 +38,9 @@
   background-color: rgb(244, 244, 244);
   transform: translateX(5%);
   transition: transform 0.2s ease-in-out;
+}
+
+.space {
+    display: inline-block;
+    width: 10px;
 }

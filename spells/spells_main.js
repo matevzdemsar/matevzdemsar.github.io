@@ -73,8 +73,12 @@ function displaySpells() {
    div.addEventListener('click', () => {
     showPopup(popup);
     popup.innerHTML =
-    `<h3>${spell.name}</h3>
+    `<h3>${spell.name}</h3> <span class="space"></span> (level ${spell.level})
+    <p>${spell.classes.map((c) => c.name).join(', ')} <span class="space"></span> </p>
+    <hr/>
+    <p>${spell.concentration === 'Y' ? 'Concentration, ' + spell.duration.toLowerCase() : spell.duration}</p>
     <p>${spell.desc.join(" ")}</p>
+
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));

@@ -88,7 +88,7 @@ return monsters
     && (!legendary_actions || (m.legendary_actions === legendary_actions))
     && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
-       operatorChoice(m[key], ability_scores[key].value,
+       operatorChoice(m[key], Number(ability_scores[key].value),
         ability_scores[key].operation))));
 }
 

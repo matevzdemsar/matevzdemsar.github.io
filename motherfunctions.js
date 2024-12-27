@@ -73,6 +73,11 @@ export function hidePopup(popup) {
     }
 }
 
+String.prototype.toTitle = function () {
+  if (!this.length) return this;
+  return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 export function createFilterBox(filterOptions, filterChoice, display) {
 
   const filterBox = document.getElementById("filterBox");
