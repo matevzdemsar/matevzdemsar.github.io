@@ -42,30 +42,33 @@ function displaySpells() {
 
   popup.className = 'spell_popup';
   popup.style.display = 'none';
-  popup.style.position = 'fixed';
-  popup.style.top = '50%';
-  popup.style.left = '50%';
-  popup.style.transform = 'translate(-50%, -50%)';
-  popup.style.border = '1px solid black';
-  popup.style.padding = '20px';
-  popup.style.backgroundColor = 'white';
-  popup.style.zIndex = '1000';
-  // TO-DO: Move this to the CSS file when you make it.
 
   document.body.appendChild(popup);
 
   filteredSpells.forEach((spell, index) => {
     const div = document.createElement('div');
-    div.textContent = spell.name;
-    div.description = spell.desc;
-    // TO-DO: Add things like spell level, classes etc. to this.
+    div.classList.add('spell');
+
+    const spell_name = document.createElement('div');
+    spell_name.innerHTML = `<br>${spell.name}`;
+    div.appendChild(spell_name);
+
+    const spell_info = document.createElement('div');
+    spell_info.classList.add('spell_info');
+    spell_info.innerHTML =
+    `Level: ${spell.level}<br>
+    Casting time: ${spell.casting_time.replace('bonus action', 'bonus a.')}<br>
+    Range: ${spell.range}`;
+    div.appendChild(spell_info);
+
+    // TO-DO: Add things like spell level, casting time, range etc. to this.
 
    container.appendChild(div);
 
    div.addEventListener('click', (event) => {
     showPopup(popup);
     popup.innerHTML =
-    `<p>${div.description}</p>
+    `<p>${spell.desc.join(" ")}</p>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));

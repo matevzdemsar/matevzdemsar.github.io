@@ -1,0 +1,33 @@
+.spell_popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid black;
+  padding: 20px;
+  background-color: white;
+  z-index: 1000;
+}
+
+.spell {
+    display: flex;
+    width: 500px;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: space-between;
+
+    transition: transform 0.2s ease-in-out;
+}
+
+.spell_info {
+    text-align: end;
+}
+
+.spell:hover {
+  background-color: rgb(244, 244, 244);
+  transform: translateX(5%);
+  transition: transform 0.2s ease-in-out;
+}
