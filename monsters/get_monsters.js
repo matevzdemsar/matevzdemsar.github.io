@@ -19,16 +19,6 @@ import { changeInObject, yes_no } from '../motherfunctions.js';
                     (obj.name === "Legendary Resistance")))
                 }))
                 .map((m) => changeInObject(m, "legendary_actions", (arr) => yes_no(arr.length)))
-        
-        // go over the special features and return the things the filter needs.
-        // Check if they have "Spellcasting" in their special_abilities list.
-        // The structure of the monster object is as follows: {"special_abilities: [{"name": "Spellcasting", "spells": object[]} {"name": "legendary_actions" ...}]"}
-        // Make sure the filter can access all necessary information about the monster.
-        //
-        // What the filter needs from special abilities:
-        // caster: "Y"|"N"
-        // spells: string[]
-        // legendary_resistances: "Y"|"N"
 
     writeFileSync('monsters.json', JSON.stringify(monstersForFilter, null, 2));
     writeFileSync('monsters_original.json', JSON.stringify(monsters, null, 2));

@@ -1,11 +1,3 @@
-// dnd5eapi.co
-// await (await fetch(url)).text()
-// to vržeš v JSON.parse, da dobiš objekt
-// .map čez vse objekte, da jih prilagodim svojim potrebam
-// shrani to v spells.json ali kaj podobnega
-// fetch('./spells.json'), ko bom to rabil.
-// JS/D&D/get_spells.js
-
 import { writeFileSync } from 'fs';
 import { yes_no } from '../motherfunctions.js'; // To ne dela, moraš prav napisati pot.
 import { changeInObject } from '../motherfunctions.js';

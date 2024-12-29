@@ -63,8 +63,6 @@ function displaySpells() {
     Range: ${spell.range}`;
     div.appendChild(spell_info);
 
-    // TO-DO: Add things like spell level, casting time, range etc. to this.
-
    container.appendChild(div);
 
    div.addEventListener('click', () => {
@@ -95,4 +93,3 @@ function displaySpells() {
 
 createFilterBox(filterOptions, filterChoice, displaySpells);
 displaySpells();
-

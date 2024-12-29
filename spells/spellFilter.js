@@ -41,5 +41,5 @@ export function spellFilter (
                 );
 }
 
-    // Add the option Saving throw / Attack roll / None to the spell filter?
-    // Filtering damage type might also be useful.
+// Add the option Saving throw / Attack roll / None to the spell filter?
+// Filtering damage type might also be useful.

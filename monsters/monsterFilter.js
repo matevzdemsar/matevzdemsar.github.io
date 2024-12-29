@@ -31,9 +31,6 @@ import { operatorChoice } from "../motherfunctions.js"
  * @returns {monster[]}
  */
 
-// Add a filter for legendary actions
-
-
 export function monsterFilter (
   monsters,
   {name = false,
@@ -61,9 +58,6 @@ export function monsterFilter (
       wisdom: {value: 0, operation: ">="},
       charisma: {value: 0, operation: ">="}}
 } = {}) {
-    // console.log(legendary_actions);
-    // console.log(legendary_resistances);
-    // console.log(speed);
 return monsters
     .filter((m) => (!name || m.index.includes(name.toLowerCase().replace("-", " ")))
     && (!type.length || type.includes(m.type))
@@ -91,9 +85,3 @@ return monsters
        operatorChoice(m[key], Number(ability_scores[key].value),
         ability_scores[key].operation))));
 }
-
-// There used to be an error in get_monsters that set every monster's legendary_actions to 'Y'
-// and every monster's legendary_resistances to 'N'. If there's a problem with these filters, that might be why.
-//
-// Speed doesn't work: number >= undefined always returns false, so all categories of speed must be set to 0.
-// This is probably a job for createFilterBox

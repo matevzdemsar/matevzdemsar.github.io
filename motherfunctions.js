@@ -52,14 +52,6 @@ export function operatorChoice(num1, num2, op) {
     }
 }
 
-// export function closeAllPopups() {
-//     const allPopups = document.querySelectorAll('[id^="popup-"]');
-//     allPopups.forEach((popup) => {
-//         popup.style.display = "none";
-//     })
-// }
-
-// Function to show the popup
 export function showPopup(popup) {
     if (popup) {
         popup.style.display = 'block';
@@ -101,12 +93,6 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
     checkbox.appendChild(summary);
 
-    // const filterLabel = document.createElement('label');
-    // filterLabel.textContent = filter.title;
-    // filterLabel.htmlFor = `checkbox-${index}`;
-    // div.appendChild(filterLabel);
-
-    // the options that get displayed if the checkbox is checked
     const optionsBox = document.createElement('div');
     optionsBox.classList.add(filter.type)
 
@@ -200,7 +186,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionsBox.appendChild(option);
         optionsBox.appendChild(optionLabel);
         });
-      };
+    };
 
     function createOperator() {
 
