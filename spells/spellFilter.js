@@ -35,7 +35,7 @@ export function spellFilter (
             && (!components || s.components.every((c) => components.includes(c)))
             && (!casting_time.length || casting_time.includes(s.casting_time))
             && (!range.length || range.includes(s.range))
-            && (!duration.length || duration.includes(s.duration))
+            && (!duration.length || duration.some((d) => s.duration.includes(d)))
             && (!concentration || (s.concentration === concentration))
             && (!ritual || (s.ritual === ritual))
                 );

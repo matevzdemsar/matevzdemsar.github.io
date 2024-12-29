@@ -44,3 +44,9 @@
     display: inline-block;
     width: 10px;
 }
+
+.spell_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

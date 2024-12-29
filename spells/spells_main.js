@@ -25,10 +25,8 @@ const filterOptions = [
     '30 feet', '60 feet', '90 feet', '100 feet', '120 feet', '150 feet', '300 feet',
     '500 feet', '1 mile', '500 miles', 'Unlimited', 'Sight', 'Special']},
   {title: 'Duration:', index: 'duration', type: 'checkbox',
-    options: ['Instantaneous', 'Up to 1 round',
-    '1 round', 'Up to 1 minute', '1 minute', 'Up to 10 minutes', '10 minutes', 'Up to 1 hour',
-    '1 hour', 'Up to 2 hours', 'Up to 8 hours', '8 hours', 'Up to 24 hours', '24 hours',
-    '7 days', '30 days', 'Until dispelled', 'Special']},
+    options: ['Instantaneous', '1 round', '1 minute', '10 minutes', '1 hour', '2 hours',
+    '8 hours', '24 hours', '7 days', '30 days', 'Until dispelled', 'Special']},
   {title: 'Concentration:', index: 'concentration',  type: 'radio', options: ['Y', 'N']},
   {title: 'Ritual:', index: 'ritual', type: 'radio', options: ['Y', 'N']}
 ];
@@ -40,7 +38,6 @@ function displaySpells() {
 
   const popup = document.getElementById('spell_popup');
   document.addEventListener('keydown', (event) => {
-    console.log(event.key)
     if (event.key === 'Escape')
       hidePopup(popup);
   })
@@ -73,11 +70,20 @@ function displaySpells() {
    div.addEventListener('click', () => {
     showPopup(popup);
     popup.innerHTML =
-    `<h3>${spell.name}</h3> <span class="space"></span> (level ${spell.level})
-    <p>${spell.classes.map((c) => c.name).join(', ')} <span class="space"></span> </p>
+    `<div class="spell_header">
+      <div>
+      <h3>${spell.name}</h3> <span class="space"></span> (level ${spell.level})
+      <p>${spell.classes.map((c) => c.name).join(', ')} </p>
+      <p>${spell.concentration === 'Y' ? 'Concentration, ' + spell.duration.toLowerCase() : spell.duration}</p>
+      </div>
+      <div>
+      <p>Components: ${spell.components.join(', ')} </p>
+      <p>Casting time: ${spell.casting_time} </p>
+      <p>Range: ${spell.range} </p>
+      </div>
+    </div>
     <hr/>
-    <p>${spell.concentration === 'Y' ? 'Concentration, ' + spell.duration.toLowerCase() : spell.duration}</p>
-    <p>${spell.desc.join(" ")}</p>
+    <p>${spell.desc.join("<br>").replace(/\*\*\*(.*?)\*\*\*/g, '<br><b>$1</b>')}</p>
 
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
