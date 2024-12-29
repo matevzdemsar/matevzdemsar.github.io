@@ -94,17 +94,17 @@ export function createFilterBox(filterOptions, filterChoice, display) {
   filterOptions.forEach((filter, index) => {
     const div = document.createElement('div');
 
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
+    const checkbox = document.createElement('details');
     checkbox.id = `checkbox-${index}`;
-    checkbox.name = filter.title;
+    const summary = document.createElement('summary');
+    summary.innerHTML = filter.title;
 
-    div.appendChild(checkbox);
+    checkbox.appendChild(summary);
 
-    const filterLabel = document.createElement('label');
-    filterLabel.textContent = filter.title;
-    filterLabel.htmlFor = `checkbox-${index}`;
-    div.appendChild(filterLabel);
+    // const filterLabel = document.createElement('label');
+    // filterLabel.textContent = filter.title;
+    // filterLabel.htmlFor = `checkbox-${index}`;
+    // div.appendChild(filterLabel);
 
     // the options that get displayed if the checkbox is checked
     const optionsBox = document.createElement('div');
@@ -120,26 +120,12 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       createOperator();
     }
 
-    div.appendChild(optionsBox)
-    optionsBox.style.display = 'none';
-    filterBox.appendChild(div);
+    checkbox.appendChild(optionsBox);
+    div.appendChild(checkbox);
+    filterBox.appendChild(checkbox);
 
     function createCheckbox () {
       const checkboxStates = [];
-
-      checkbox.addEventListener('change', () => {
-        if(checkbox.checked) {
-          optionsBox.style.display = '';
-        } else {
-          optionsBox.style.display = 'none';
-          optionsBox.querySelectorAll('input').forEach((i) => {
-            i.checked = false;
-          })
-          checkboxStates.length = 0;
-          filterChoice[filter.index] = false;
-          display();
-        }
-      })
 
       filter.options.forEach((o, subIndex) => {
 
@@ -178,17 +164,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
     function createSearchbar () {
       const searchBar = document.createElement('input');
-      searchBar.type = 'search'
-
-      checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-          optionsBox.style.display = 'block';
-        } else {
-          optionsBox.style.display = 'none';
-          optionsBox.querySelector('input').value = ""
-          filterChoice[filter.index] = "";
-          display();
-        }})
+      searchBar.type = 'search';
 
       searchBar.addEventListener('input', () => {
         filterChoice['name'] = event.target.value;
@@ -202,60 +178,31 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       let lastChecked = false;
 
       filter.options.forEach((o, subIndex) => {
+        const option = document.createElement('input');
+        option.type = 'radio';
+        option.id = `option-${index}-${subIndex}`;
+        option.name = filter.title;
+        const optionLabel = document.createElement('label');
+        optionLabel.htmlFor = `option-${index}-${subIndex}`;
+        optionLabel.textContent = o;
 
-          const option = document.createElement('input');
-          option.type = 'radio';
-          option.id = `option-${index}-${subIndex}`;
-          option.name = filter.title;
-
-          const optionLabel = document.createElement('label');
-          optionLabel.htmlFor = `option-${index}-${subIndex}`;
-          optionLabel.textContent = o;
-
-          checkbox.addEventListener('change', () => {
-            if(checkbox.checked) {
-              optionsBox.style.display = '';
-              optionsBox.style.flexDirection = 'row';
-              optionsBox.style.gap = '10px';
+        option.addEventListener('click', function () {
+            if(lastChecked === o) {
+                this.checked = false;
+                lastChecked = false;
             } else {
-              optionsBox.style.display = 'none';
-              optionsBox.querySelectorAll('input').forEach((i) => {
-              i.checked = false;
-              })
-              filterChoice[filter.index] = false;
-              display();
+                lastChecked = o;
             }
-
-          option.addEventListener('click', function () {
-              if(lastChecked === o) {
-                  this.checked = false;
-                  lastChecked = false;
-              } else {
-                  lastChecked = o;
-              }
-
-              filterChoice[filter.index] = lastChecked;
-              display();
-
-            });
-    
-          optionsBox.appendChild(option);
-          optionsBox.appendChild(optionLabel);
+            filterChoice[filter.index] = lastChecked;
+            display();
           });
+  
+        optionsBox.appendChild(option);
+        optionsBox.appendChild(optionLabel);
         });
-    };
+      };
 
     function createOperator() {
-      checkbox.addEventListener('change', () => {
-        if (checkbox.checked) {
-        optionsBox.style.display = 'block'
-        } else {
-        optionsBox.style.display = 'none';
-        filter.options.forEach((o, subIndex) => {
-          Object.assign(filterChoice[filter.index], {[o.category]: {}});
-        });
-        display();
-      }});
 
       filterChoice[filter.index] = {}
 
