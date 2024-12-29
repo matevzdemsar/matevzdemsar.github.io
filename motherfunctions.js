@@ -66,11 +66,20 @@ export function showPopup(popup) {
     }
 }
 
-// Function to hide the popup
+const ads = [
+  '../assets/ad1.png',
+  '../assets/ad2.png',
+  '../assets/ad3.png',
+  '../assets/ad4.png',
+  '../assets/ad5.png',
+];
+
 export function hidePopup(popup) {
     if (popup) {
         popup.style.display = 'none';
     }
+    const img = document.getElementById('ad');
+    img.src = ads[Math.floor(Math.random() * ads.length)];
 }
 
 String.prototype.toTitle = function () {
@@ -99,6 +108,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
     // the options that get displayed if the checkbox is checked
     const optionsBox = document.createElement('div');
+    optionsBox.classList.add(filter.type)
 
     if(filter.type === 'checkbox') {
       createCheckbox();
@@ -119,9 +129,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
       checkbox.addEventListener('change', () => {
         if(checkbox.checked) {
-          optionsBox.style.display = 'block';
-          optionsBox.style.flexDirection = 'row';
-          optionsBox.style.gap = '10px';
+          optionsBox.style.display = '';
         } else {
           optionsBox.style.display = 'none';
           optionsBox.querySelectorAll('input').forEach((i) => {
@@ -135,6 +143,8 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
       filter.options.forEach((o, subIndex) => {
 
+        const input = document.createElement('div');
+
         const option = document.createElement('input');
         option.type = 'checkbox';
         option.id = `option-${index}-${subIndex}`;
@@ -143,6 +153,9 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         const optionLabel = document.createElement('label');
         optionLabel.htmlFor = `option-${index}-${subIndex}`;
         optionLabel.textContent = o;
+
+        input.appendChild(option);
+        input.appendChild(optionLabel);
 
         option.addEventListener('change', () => {
             if(option.checked) {
@@ -158,8 +171,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
             }
           })
 
-          optionsBox.appendChild(option);
-          optionsBox.appendChild(optionLabel);
+          optionsBox.appendChild(input);
 
       });
     };
@@ -169,7 +181,6 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       searchBar.type = 'search'
 
       checkbox.addEventListener('change', () => {
-        optionsBox.style.display = checkbox.checked ? 'block' : 'none';
         if (checkbox.checked) {
           optionsBox.style.display = 'block';
         } else {
@@ -203,7 +214,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
           checkbox.addEventListener('change', () => {
             if(checkbox.checked) {
-              optionsBox.style.display = 'block';
+              optionsBox.style.display = '';
               optionsBox.style.flexDirection = 'row';
               optionsBox.style.gap = '10px';
             } else {
@@ -238,8 +249,6 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       checkbox.addEventListener('change', () => {
         if (checkbox.checked) {
         optionsBox.style.display = 'block'
-        optionsBox.style.flexDirection = 'column';
-        optionsBox.style.gap = '10px';
         } else {
         optionsBox.style.display = 'none';
         filter.options.forEach((o, subIndex) => {
