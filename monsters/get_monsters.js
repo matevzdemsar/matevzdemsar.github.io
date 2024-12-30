@@ -2,24 +2,37 @@ import { writeFileSync } from 'fs';
 import { changeInObject, yes_no } from '../motherfunctions.js';
 
 (async () => {
-    const monsterList = (await (await fetch('https://www.dnd5eapi.co/api/monsters')).json()).results;
+    let page = 1;
+    let results = [];
+    let next = true;
+
+    while (next) {
+      try {
+      const monsterJson = await fetch(`https://api.open5e.com/v1/monsters?limit=25&page=${page}`);
+      const monsters = await monsterJson.json();
+      results = results.concat(monsters.results);
+      console.log(`${page}`);
+      if (monsters.next !== null) {
+        page += 1
+      } else {
+        next = false
+      }
+    } catch (error) {
+      console.log(`Page ${page} doesn't exist.`);
+      page += 1;
+    }
+    }
+
     console.log("Monster list downloaded successfully.");
-    const monsters = await Promise.all(monsterList.map(async (s) => await (await fetch('https://www.dnd5eapi.co' + s.url)).json()));
-    console.log("Monster data downloaded successfully.");
+    const count = {}
+    results.map(({document__title: title}) => {
+      count[title] = (count[title] ?? 0) + 1; 
+    })
 
-    const monstersForFilter = monsters
-            .map((m) => (
-                {...m,
-                caster: yes_no(m.special_abilities?.some(obj =>
-                    obj.name.includes("Spellcasting")))
-                }))
-            .map((m) => (
-                {...m,
-                legendary_resistances: yes_no(m.special_abilities?.some((obj) =>
-                    (obj.name === "Legendary Resistance")))
-                }))
-                .map((m) => changeInObject(m, "legendary_actions", (arr) => yes_no(arr.length)))
+    const monstersForFilter = results.filter((m) =>
+        ['5e Core Rules', 'Level Up Advanced 5e Monstrous Menagerie'].includes(m.document__title))
 
+    console.log(count);
     writeFileSync('monsters.json', JSON.stringify(monstersForFilter, null, 2));
-    writeFileSync('monsters_original.json', JSON.stringify(monsters, null, 2));
+    // writeFileSync('monsters_original.json', JSON.stringify(monsters, null, 2));
 }) ();

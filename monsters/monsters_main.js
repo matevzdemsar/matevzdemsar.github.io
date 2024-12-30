@@ -61,14 +61,6 @@ function displayMonsters() {
 
   popup.className = 'monster_popup';
   popup.style.display = 'none';
-  popup.style.position = 'fixed';
-  popup.style.top = '50%';
-  popup.style.left = '50%';
-  popup.style.transform = 'translate(-50%, -50%)';
-  popup.style.border = '1px solid black';
-  popup.style.padding = '20px';
-  popup.style.backgroundColor = 'white';
-  popup.style.zIndex = '1000';
 
   document.body.appendChild(popup);
   const filteredMonsters = monsterFilter(monsters, filterChoice);
@@ -79,15 +71,16 @@ function displayMonsters() {
     div.textContent = monster.name;
     div.description = monster.name;
     // TO-DO: Add moster description, image? etc.
-
-    div.addEventListener('click', () => {
-      console.log(div.description);
-      showPopup(popup);
-      popup.innerHTML =
-      `<p>${div.description}</p>
-      <button id="close-popup">Close</button>`;
-      const closeButton = document.getElementById('close-popup');
-      closeButton.addEventListener('click', () => hidePopup(popup));
+  
+  
+  div.addEventListener('click', () => {
+    console.log(div.description);
+    showPopup(popup);
+    popup.innerHTML =
+    `<p>${div.description}</p>
+    <button id="close-popup">Close</button>`;
+    const closeButton = document.getElementById('close-popup');
+    closeButton.addEventListener('click', () => hidePopup(popup));
 })
 container.appendChild(div);
 })
