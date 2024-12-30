@@ -8,10 +8,10 @@ import { changeInObject, yes_no } from '../motherfunctions.js';
 
     while (next) {
       try {
-      const monsterJson = await fetch(`https://api.open5e.com/v1/monsters?limit=25&page=${page}`);
+      const monsterJson = await fetch(`https://api.open5e.com/v1/monsters?limit=1&page=${page}`);
       const monsters = await monsterJson.json();
       results = results.concat(monsters.results);
-      console.log(`${page}`);
+      if (!(page % 100)) {console.log(`Page ${page}`)}
       if (monsters.next !== null) {
         page += 1
       } else {

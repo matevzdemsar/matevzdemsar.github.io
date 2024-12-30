@@ -1,22 +1,29 @@
 import { monsterFilter } from "./monsterFilter.js";
 import { createFilterBox, showPopup, hidePopup } from "../motherfunctions.js";
 
-const monsters = await fetch('./monsters.json')
+const names = new Set();
+const monsters = [];
+const fromAPI = await fetch('./monsters.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load JSON:', response.statusText);
     }
     return response.json();
-});
+  })
+
+fromAPI.map(((m) => {if (!names.has(m.name)) {
+  monsters.push(m);
+  names.add(m.name);
+}}));
 
 const filterChoice = {};
 
 const filterOptions = [
   {title: 'Name:', index: 'name', type: 'search'},
   {title: 'Type:', index: 'type', type: 'checkbox',
-    options: ['aberration', 'beast', 'celestial', 'construct', 'dragon',
-    'elemental', 'fey', 'fiend', 'giant', 'humanoid', 'monstrosity',
-    'ooze', 'plant', 'undead']},
+    options: ['Aberration', 'Beast', 'Celestial', 'Construct', 'Dragon',
+    'Elemental', 'Fey', 'Fiend', 'Giant', 'Humanoid', 'Monstrosity',
+    'Ooze', 'Plant', 'Undead']},
   {title: 'Challenge rating:', index: 'challenge_rating', type: 'checkbox',
     options: ['0', '1/8', '1/4', '1/2', '1', '2', '3', '4', '5', '6', '7', '8',
     '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21',

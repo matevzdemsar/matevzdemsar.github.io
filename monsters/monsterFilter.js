@@ -59,28 +59,28 @@ export function monsterFilter (
       charisma: {value: 0, operation: ">="}}
 } = {}) {
 return monsters
-    .filter((m) => (!name || m.index.includes(name.toLowerCase().replace("-", " ")))
+    .filter((m) => (!name || m.name.toLowerCase().includes(name.toLowerCase()))
     && (!type.length || type.includes(m.type))
     && (!challenge_rating.length || challenge_rating.map((cr) => eval(cr)).includes(m.challenge_rating))
-    && (operatorChoice(m.armor_class[0].value, Number(armor_class.armor_class.value),
+    && (operatorChoice(m.armor_class.value, Number(armor_class.armor_class.value),
         armor_class.armor_class.operation))
     && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
         hit_points.hit_points.operation))
     && (Object.keys(speed).every((key) => {
-        if (!Object.keys(m.speed).includes(key)) {m.speed[key] = "0 ft."};
-      return operatorChoice(Number(m.speed[key].split(' ')[0]), Number(speed[key].value), speed[key].operation);
+        if (!Object.keys(m.speed).includes(key)) {m.speed[key] = 0};
+      return operatorChoice(Number(m.speed[key]), Number(speed[key].value), speed[key].operation);
       }))
     && (!damage_vulnerabilities.length || damage_vulnerabilities.every((v) =>
-      m.damage_vulnerabilities.join("").includes(v.toLowerCase())))
+      m.damage_vulnerabilities.includes(v.toLowerCase())))
     && (!damage_resistances.length || damage_resistances.every((r) =>
-      m.damage_resistances.join("").includes(r.toLowerCase())))
+      m.damage_resistances.includes(r.toLowerCase())))
     && (!damage_immunities.length || damage_immunities.every((i) =>
-      m.damage_immunities.join("").includes(i.toLowerCase())))
+      m.damage_immunities.includes(i.toLowerCase())))
     && (!condition_immunities.length || condition_immunities.every((c) =>
-        m.condition_immunities.map((obj) => obj.index).includes(c.toLowerCase()))) // Immunities are stored in object under the property "index" because of course they are.
-    && (!caster || (m.caster === caster))
-    && (!legendary_actions || (m.legendary_actions === legendary_actions))
-    && (!legendary_resistances || (m.legendary_resistances === legendary_resistances))
+        m.condition_immunities.includes(c.toLowerCase())))
+    && (!caster || (m.special_abilities.map((ability) => ability.name).some((a) => a.includes('Spellcasting')) ? 'Y' : 'N' === caster))
+    && (!legendary_actions || (m.legendary_actions.length ? 'Y' : 'N' === legendary_actions))
+    && (!legendary_resistances || (m.special_abilities.map((ability) => ability.name).some((a) => a.includes('Legendary Resistance')) ? 'Y' : 'N' === legendary_resistances))
     && (Object.keys(ability_scores).every((key) =>
        operatorChoice(m[key], Number(ability_scores[key].value),
         ability_scores[key].operation))));
