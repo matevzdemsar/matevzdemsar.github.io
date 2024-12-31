@@ -68,6 +68,9 @@ const ads = [
   '../assets/ad7.png',
   '../assets/ad8.png',
   '../assets/ad9.png',
+  '../assets/ad10.png',
+  '../assets/ad11.png',
+  '../assets/ad12.png',
 ];
 
 export function hidePopup(popup) {
