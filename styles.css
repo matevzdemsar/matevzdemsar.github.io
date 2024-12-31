@@ -1,5 +1,5 @@
 :root {
-    --popup-width: 30%;
+    --popup-width: 40%;
 }
 
 .spell_popup {
@@ -56,7 +56,7 @@
     position: fixed;
     top: 0;
     right: 0;
-    max-width: var(--popup-width);
+    max-width: 30%;
     border: 1px solid black;
     padding: 0px;
     background-color: white;
@@ -88,18 +88,32 @@
     z-index: 1000;
   }
 
-  .monster {
-    width: 30%;
-    border: 1px solid black;
-    margin: 10px;
-    border-radius: 5px;
-    padding: 5px;
+.monster {
+  width: 30%;
+  border: 1px solid black;
+  margin: 10px;
+  border-radius: 5px;
+  padding: 5px;
+  transition: transform 0.2s ease-in-out;
+}
 
-    transition: transform 0.2s ease-in-out;
-  }
+.monster:hover {
+  background-color: rgb(244, 244, 244);
+  transform: translateX(5%);
+  transition: transform 0.2s ease-in-out;
+}
 
-  .monster:hover {
-    background-color: rgb(244, 244, 244);
-    transform: translateX(5%);
-    transition: transform 0.2s ease-in-out;
-  }
+.basic_info {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
+.icon {
+    position: relative;
+}
+
+.basic_data {
+    position: absolute;
+    width: 100%;
+}

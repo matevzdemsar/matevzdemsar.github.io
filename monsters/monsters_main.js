@@ -79,9 +79,6 @@ function displayMonsters() {
   div.innerHTML = `<b>${monster.name}</b> <br>
    <i>${monster.type} CR: ${monster.challenge_rating}<i>`;
 
-  const basic_info = document.createElement('basic_info');
-  basic_info.innerHTML = ``;
-  popup.appendChild(basic_info);
   // TO-DO: Add moster description, image? etc.
   
   
@@ -93,6 +90,23 @@ function displayMonsters() {
       <p>${monster.size} ${monster.type.toLowerCase()}${monster.subtype ? ` (${monster.subtype})` : ""},
       ${monster.alignment ? monster.alignment : 'unaligned'}</p>
     </div>
+    <p>
+    <div class="basic_info">
+      <div>
+        <img src=../assets/shield.jpg alt="" class="icon" width=50px>
+        <span class="basic_data"> ${monster.armor_class} </span>
+      </div>
+      <div>
+        <img src=../assets/heart.jpg alt="" class="icon" width=68px>
+        <span class="basic_data"> ${monster.hit_points} </span>
+      </div>
+      <div>
+        <img src=../assets/d20.jpg alt="" class="icon" width=58px>
+        <span class="basic_data"> ${monster.challenge_rating} </span>
+      </div>
+    </div>
+    </p>
+    <br>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));
