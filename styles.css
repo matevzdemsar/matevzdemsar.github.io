@@ -20,7 +20,7 @@
 
 .spell {
     display: flex;
-    width: 500px;
+    width: 40%;
     border: 1px solid black;
     margin: 10px;
     border-radius: 5px;
@@ -86,4 +86,20 @@
     padding: 20px;
     background-color: white;
     z-index: 1000;
+  }
+
+  .monster {
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .monster:hover {
+    background-color: rgb(244, 244, 244);
+    transform: translateX(5%);
+    transition: transform 0.2s ease-in-out;
   }

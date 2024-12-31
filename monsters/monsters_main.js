@@ -75,7 +75,9 @@ function displayMonsters() {
   console.log(filteredMonsters)
   filteredMonsters.forEach((monster) => {
   const div = document.createElement('div');
-  div.textContent = monster.name;
+  div.classList.add('monster')
+  div.innerHTML = `<b>${monster.name}</b> <br>
+   <i>${monster.type} CR: ${monster.challenge_rating}<i>`;
 
   const basic_info = document.createElement('basic_info');
   basic_info.innerHTML = ``;
