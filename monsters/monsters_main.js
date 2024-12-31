@@ -74,17 +74,23 @@ function displayMonsters() {
 
   console.log(filteredMonsters)
   filteredMonsters.forEach((monster) => {
-    const div = document.createElement('div');
-    div.textContent = monster.name;
-    div.description = monster.name;
-    // TO-DO: Add moster description, image? etc.
+  const div = document.createElement('div');
+  div.textContent = monster.name;
+
+  const basic_info = document.createElement('basic_info');
+  basic_info.innerHTML = ``;
+  popup.appendChild(basic_info);
+  // TO-DO: Add moster description, image? etc.
   
   
   div.addEventListener('click', () => {
-    console.log(div.description);
     showPopup(popup);
     popup.innerHTML =
-    `<p>${div.description}</p>
+    `<div class="monster_header">
+      <h3>${monster.name}</h3>
+      <p>${monster.size} ${monster.type.toLowerCase()}${monster.subtype ? ` (${monster.subtype})` : ""},
+      ${monster.alignment ? monster.alignment : 'unaligned'}</p>
+    </div>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));
