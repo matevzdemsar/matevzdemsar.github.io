@@ -30,6 +30,7 @@ import { operatorChoice } from "../motherfunctions.js"
  * @param {{value: number, operation: ">=", "===", "<="}} cha
  * @returns {monster[]}
  */
+const utilitySet = new Set();
 
 export function monsterFilter (
   monsters,
@@ -61,7 +62,7 @@ export function monsterFilter (
 return monsters
     .filter((m) => (!name || m.name.toLowerCase().includes(name.toLowerCase()))
     && (!type.length || type.includes(m.type))
-    && (!challenge_rating.length || challenge_rating.map((cr) => eval(cr)).includes(m.challenge_rating))
+    && (!challenge_rating.length || challenge_rating.includes(m.challenge_rating))
     && (operatorChoice(m.armor_class.value, Number(armor_class.armor_class.value),
         armor_class.armor_class.operation))
     && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
@@ -78,9 +79,11 @@ return monsters
       m.damage_immunities.includes(i.toLowerCase())))
     && (!condition_immunities.length || condition_immunities.every((c) =>
         m.condition_immunities.includes(c.toLowerCase())))
-    && (!caster || (m.special_abilities.map((ability) => ability.name).some((a) => a.includes('Spellcasting')) ? 'Y' : 'N' === caster))
+    && (!caster || (caster === 'Y') ===
+      (!!m.special_abilities?.some(({name}) => name.includes('Spellcasting'))))
     && (!legendary_actions || (m.legendary_actions.length ? 'Y' : 'N' === legendary_actions))
-    && (!legendary_resistances || (m.special_abilities.map((ability) => ability.name).some((a) => a.includes('Legendary Resistance')) ? 'Y' : 'N' === legendary_resistances))
+    && (!legendary_resistances || (legendary_resistances === 'Y') ===
+      (!!m.special_abilities?.some(({name}) => name.includes('Legendary Resistance'))))
     && (Object.keys(ability_scores).every((key) =>
        operatorChoice(m[key], Number(ability_scores[key].value),
         ability_scores[key].operation))));

@@ -145,23 +145,45 @@ export function createFilterBox(filterOptions, filterChoice, display) {
             } else {
               display();
             }
-          })
+          });
 
           optionsBox.appendChild(input);
 
       });
-    };
+
+      checkbox.addEventListener('toggle', (event) => {
+        if (!checkbox.open) {
+          optionsBox.querySelectorAll('input').forEach((i) => {
+            i.checked = false;
+            filterChoice[filter.index] = false;
+          });
+          display();
+        }
+      });
+
+    }
 
     function createSearchbar () {
       const searchBar = document.createElement('input');
       searchBar.type = 'search';
 
-      searchBar.addEventListener('input', () => {
-        filterChoice['name'] = event.target.value;
+      searchBar.addEventListener('input', (event) => {
+        filterChoice[filter.index] = event.target.value;
         display();
       })
 
       optionsBox.appendChild(searchBar);
+
+      checkbox.addEventListener('toggle', (event) => {
+        if (!checkbox.open) {
+          optionsBox.querySelectorAll('input').forEach((i) => {
+            i.value = false;
+            filterChoice[filter.index] = false;
+          });
+          display();
+        }
+      });
+
     };
 
     function createRadio() {
@@ -190,6 +212,18 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionsBox.appendChild(option);
         optionsBox.appendChild(optionLabel);
         });
+
+        checkbox.addEventListener('toggle', (event) => {
+          if (!checkbox.open) {
+            optionsBox.querySelectorAll('input').forEach((i) => {
+              i.checked = false;
+              filterChoice[filter.index] = false;
+              lastChecked = false;
+            });
+            display();
+          }
+        });
+
     };
 
     function createOperator() {
