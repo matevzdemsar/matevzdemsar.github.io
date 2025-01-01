@@ -82,6 +82,7 @@ export function hidePopup(popup) {
     }
     const img = document.getElementById('ad');
     img.src = ads[Math.floor(Math.random() * ads.length)];
+    console.log(img.src);
 }
 
 String.prototype.toTitle = function () {
