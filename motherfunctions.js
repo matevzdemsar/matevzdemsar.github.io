@@ -126,7 +126,7 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     filterBox.appendChild(checkbox);
 
     function createCheckbox () {
-      const checkboxStates = [];
+      let checkboxStates = [];
 
       filter.options.forEach((o, subIndex) => {
 
@@ -166,8 +166,9 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         if (!checkbox.open) {
           optionsBox.querySelectorAll('input').forEach((i) => {
             i.checked = false;
-            filterChoice[filter.index] = false;
           });
+          filterChoice[filter.index] = false
+          checkboxStates = [];
           display();
         }
       });
