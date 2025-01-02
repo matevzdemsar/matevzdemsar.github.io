@@ -87,25 +87,23 @@ function displayMonsters() {
     popup.innerHTML =
     `<div class="monster_header">
       <h3>${monster.name}</h3>
-      <p>${monster.size} ${monster.type.toLowerCase()}${monster.subtype ? ` (${monster.subtype})` : ""},
-      ${monster.alignment ? monster.alignment : 'unaligned'}</p>
+      <span>${monster.size} ${monster.type.toLowerCase()}${monster.subtype ? ` (${monster.subtype})` : ""},
+      ${monster.alignment ? monster.alignment : 'unaligned'}</span>
     </div>
-    <p>
     <div class="basic_info">
-      <div>
-        <img src=../assets/shield.jpg alt="" class="icon" width=50px>
-        <span class="basic_data"> ${monster.armor_class} </span>
+      <div class="image_container">
+        <img src=../assets/shield.jpg alt="Shield" width=37.5px>
+        <div class="basic_data"> ${monster.armor_class} </div>
       </div>
-      <div>
-        <img src=../assets/heart.jpg alt="" class="icon" width=68px>
-        <span class="basic_data"> ${monster.hit_points} </span>
+      <div class="image_container">
+        <img src=../assets/heart.jpg alt="Heart" width=51px class="gray">
+        <div class="basic_data"> ${monster.hit_points} </div>
       </div>
-      <div>
-        <img src=../assets/d20.jpg alt="" class="icon" width=58px>
-        <span class="basic_data"> ${monster.challenge_rating} </span>
+      <div class="image_container">
+        <img src=../assets/d20.jpg alt="d20" width=43.5px class="gray">
+        <div class="basic_data"> ${monster.challenge_rating} </div>
       </div>
     </div>
-    </p>
     <br>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
