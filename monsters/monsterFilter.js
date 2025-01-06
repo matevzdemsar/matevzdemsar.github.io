@@ -63,7 +63,7 @@ return monsters
     .filter((m) => (!name || m.name.toLowerCase().includes(name.toLowerCase()))
     && (!type.length || type.includes(m.type))
     && (!challenge_rating.length || challenge_rating.includes(m.challenge_rating))
-    && (operatorChoice(m.armor_class.value, Number(armor_class.armor_class.value),
+    && (operatorChoice(m.armor_class, Number(armor_class.armor_class.value),
         armor_class.armor_class.operation))
     && (operatorChoice(m.hit_points, Number(hit_points.hit_points.value),
         hit_points.hit_points.operation))

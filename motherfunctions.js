@@ -281,6 +281,8 @@ export function createFilterBox(filterOptions, filterChoice, display) {
 
         });
 
+        // This works, but the code seems to run multiple times unnecessarily.
+
         option.appendChild(optionOperator);
         option.appendChild(optionValue);
 
@@ -288,6 +290,18 @@ export function createFilterBox(filterOptions, filterChoice, display) {
         optionsBox.appendChild(option);
 
       });
-    };
-  });
+
+    checkbox.addEventListener('toggle', (event) => {
+      optionsBox.querySelectorAll('input').forEach((i) => {
+        i.value = false;
+      });
+      filter.options.forEach((o, subIndex) => {
+        filterChoice[filter.index][o.category] = {}
+      });
+      display();
+    });
+
+  }});
 }
+
+// ToDo: reset the operation filters if the user closes them.
