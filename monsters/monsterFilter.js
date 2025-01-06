@@ -81,7 +81,7 @@ return monsters
         m.condition_immunities.includes(c.toLowerCase())))
     && (!caster || (caster === 'Y') ===
       (!!m.special_abilities?.some(({name}) => name.includes('Spellcasting'))))
-    && (!legendary_actions || (m.legendary_actions.length ? 'Y' : 'N' === legendary_actions))
+    && (!legendary_actions || (m.legendary_actions?.length ? 'Y' : 'N' === legendary_actions))
     && (!legendary_resistances || (legendary_resistances === 'Y') ===
       (!!m.special_abilities?.some(({name}) => name.includes('Legendary Resistance'))))
     && (Object.keys(ability_scores).every((key) =>
