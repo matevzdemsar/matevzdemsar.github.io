@@ -81,12 +81,16 @@ const ads = [
   '../assets/ad20.png',
 ];
 
+const permitAds = false
+
 export function hidePopup(popup) {
     if (popup) {
         popup.style.display = 'none';
     }
+    if (permitAds) {
     const img = document.getElementById('ad');
     img.src = ads[Math.floor(Math.random() * ads.length)];
+    }
 }
 
 String.prototype.toTitle = function () {

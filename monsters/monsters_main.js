@@ -42,10 +42,14 @@ const filterOptions = [
     'Grappled', 'Restrained', 'Petrified', 'Stunned', 'Incapacitated',
     'Deafened', 'Blinded', 'Poisoned', 'Exhaustion']},
   {title: 'Spellcaster:', index: 'caster', type: 'radio', options: ['Y', 'N']},
-  {title: 'Legendary resistances:', index: 'legendary_resistances', type: 'radio', options: ['Y', 'N']},
-  {title: 'Legendary actions:', index: 'legendary_actions', type: 'radio', options: ['Y', 'N']},
-  {title: 'Armor class:', index: 'armor_class', type: 'operator', options: [{category: 'armor_class', c_name: ''}]},
-  {title: 'Hit points:', index: 'hit_points', type: 'operator', options: [{category: 'hit_points', c_name: ''}]},
+  {title: 'Legendary resistances:', index: 'legendary_resistances', type: 'radio',
+    options: ['Y', 'N']},
+  {title: 'Legendary actions:', index: 'legendary_actions', type: 'radio',
+    options: ['Y', 'N']},
+  {title: 'Armor class:', index: 'armor_class', type: 'operator',
+    options: [{category: 'armor_class', c_name: ''}]},
+  {title: 'Hit points:', index: 'hit_points', type: 'operator',
+    options: [{category: 'hit_points', c_name: ''}]},
   {title: 'Speed:', index: 'speed', type: 'operator', options: [
     {category: 'walk', c_name: 'Walking:'},
     {category: 'swim', c_name: 'Swimming:'},
@@ -61,10 +65,17 @@ const filterOptions = [
     {category: 'charisma', c_name: 'CHA:'}]}
 ];
 
+const modifiers = ["-5", "-4", "-3", "-2", "-1", "0", "+1", "+2", "+3", "+4",
+  "+5", "+6", "+7", "+8", "+9", "+10"]
+
 function displayMonsters() {
   container.innerHTML = '';
 
   const popup = document.getElementById('monster_popup');
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape')
+      hidePopup(popup);
+  });
 
   popup.className = 'monster_popup';
   popup.style.display = 'none';
@@ -104,7 +115,18 @@ function displayMonsters() {
         <div class="basic_data"> ${monster.challenge_rating} </div>
       </div>
     </div>
-    <br>
+    <hr>
+    <div class="ability_scores">
+      <div class="score"> STR <br> ${monster.strength} (${modifiers[Math.floor(monster.strength / 2)]}) </div>
+      <div class="score"> DEX <br> ${monster.dexterity} (${modifiers[Math.floor(monster.dexterity / 2)]}) </div>
+      <div class="score"> CON <br> ${monster.constitution} (${modifiers[Math.floor(monster.constitution / 2)]}) </div>
+      <div class="score"> INT <br> ${monster.intelligence} (${modifiers[Math.floor(monster.intelligence / 2)]}) </div>
+      <div class="score"> WIS <br> ${monster.wisdom} (${modifiers[Math.floor(monster.wisdom / 2)]}) </div>
+      <div class="score"> CHA <br> ${monster.charisma} (${modifiers[Math.floor(monster.charisma / 2)]}) </div>
+    </div>
+    <hr> <br>
+
+
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));

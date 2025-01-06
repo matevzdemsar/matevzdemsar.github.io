@@ -12,6 +12,8 @@
   padding: 20px;
   background-color: white;
   z-index: 1000;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .spell_popup h3 {
@@ -86,7 +88,9 @@
     padding: 20px;
     background-color: white;
     z-index: 1000;
-  }
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 .monster {
   width: 30%;
@@ -130,4 +134,14 @@
     align-items: center;
     justify-content: center;
     font-weight: bold;
+}
+
+.ability_scores {
+    display: flex;
+    flex-direction: row;
+}
+
+.score {
+    padding: 10px;
+    text-align: center;
 }
