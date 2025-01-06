@@ -16,6 +16,8 @@ fromAPI.map(((m) => {if (!names.has(m.name)) {
   names.add(m.name);
 }}));
 
+// ToDo: do another map to delete all the monsters that are immune to fatigue.
+
 const filterChoice = {};
 
 const filterOptions = [
@@ -90,8 +92,6 @@ function displayMonsters() {
   div.innerHTML = `<b>${monster.name}</b> <br>
    <i>${monster.type} CR: ${monster.challenge_rating}<i>`;
 
-  // TO-DO: Add moster description, image? etc.
-  
   
   div.addEventListener('click', () => {
     showPopup(popup);
@@ -125,7 +125,14 @@ function displayMonsters() {
       <div class="score"> CHA <br> ${monster.charisma} (${modifiers[Math.floor(monster.charisma / 2)]}) </div>
     </div>
     <hr> <br>
-
+    ${monster.damage_vulnerabilities === "" ? "" : `<div class="other_info"> <b>Damage Vulnerabilities:</b> ${monster.damage_vulnerabilities}</div>`}
+    ${monster.damage_resistances === "" ? "" : `<div class="other_info"> <b>Damage Resistances:</b> ${monster.damage_resistances}</div>`}
+    ${monster.damage_immunities === "" ? "" : `<div class="other_info"> <b>Damage Immunities:</b> ${monster.damage_immunities}</div>`}
+    ${monster.condition_immunities === "" ? "" : `<div class="other_info"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
+    ${monster.condition_immunities === "" ? "" : `<div class="other_info"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
+    <div class="other_info"><b>Senses:</b> ${monster.senses}<div>
+    ${monster.langauges === "" ? "" : `<div class="other_info"> <b>Languages:</b> ${monster.languages}</div>`}
+    <div class="other_info"><b>Challenge Rating:</b> ${monster.challenge_rating}<div>
 
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
