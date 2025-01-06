@@ -305,7 +305,8 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       display();
     });
 
-  }});
+    }
+  });
 }
 
 // ToDo: reset the operation filters if the user closes them.
