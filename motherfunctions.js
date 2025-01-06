@@ -193,8 +193,8 @@ export function createFilterBox(filterOptions, filterChoice, display) {
       checkbox.addEventListener('toggle', (event) => {
         if (!checkbox.open) {
           optionsBox.querySelectorAll('input').forEach((i) => {
-            i.value = false;
-            filterChoice[filter.index] = false;
+            i.value = "";
+            filterChoice[filter.index] = "";
           });
           display();
         }
