@@ -124,16 +124,36 @@ function displayMonsters() {
       <div class="score"> WIS <br> ${monster.wisdom} (${modifiers[Math.floor(monster.wisdom / 2)]}) </div>
       <div class="score"> CHA <br> ${monster.charisma} (${modifiers[Math.floor(monster.charisma / 2)]}) </div>
     </div>
-    <hr> <br>
-    ${monster.damage_vulnerabilities === "" ? "" : `<div class="other_info"> <b>Damage Vulnerabilities:</b> ${monster.damage_vulnerabilities}</div>`}
-    ${monster.damage_resistances === "" ? "" : `<div class="other_info"> <b>Damage Resistances:</b> ${monster.damage_resistances}</div>`}
-    ${monster.damage_immunities === "" ? "" : `<div class="other_info"> <b>Damage Immunities:</b> ${monster.damage_immunities}</div>`}
-    ${monster.condition_immunities === "" ? "" : `<div class="other_info"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
-    ${monster.condition_immunities === "" ? "" : `<div class="other_info"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
-    <div class="other_info"><b>Senses:</b> ${monster.senses}<div>
-    ${monster.langauges === "" ? "" : `<div class="other_info"> <b>Languages:</b> ${monster.languages}</div>`}
-    <div class="other_info"><b>Challenge Rating:</b> ${monster.challenge_rating}<div>
-
+    <hr>
+    <div class="other_info">
+      ${!(!!monster.strength_save || !!monster.dexterity_save || !!monster.constitution_save
+        || !!monster.intelligence_save || !!monster.wisdom_save || !!monster.charisma_save) ? ""
+        : `<div class="other_data"><b>Saving throws:</b>
+         ${!!monster.strength_save ? `<br><span class=space></span> Strength +${monster.strength_save}` : ""}
+         ${!!monster.dexterity_save ? `<br><span class=space></span> Dexterity +${monster.dexterity_save}` : ""}
+         ${!!monster.constitution_save ? `<br><span class=space></span> Constitution +${monster.constitution_save}` : ""}
+         ${!!monster.intelligence_save ? `<br><span class=space></span> Intellligence +${monster.intelligence_save}` : ""}
+         ${!!monster.wisdom_save ? `<br><span class=space></span> Wisdom +${monster.wisdom_save}` : ""}
+         ${!!monster.charisma_save ? `<br><span class=space></span> Charisma +${monster.charisma_save}` : ""}
+        </div>`}
+      ${!Object.keys(monster.skills).length ? ""
+        : `<div class="other_data"> <b>Skills:</b> ${Object.keys(monster.skills).map((s) => ` ${s} +${monster.skills[s]}`)}</div>`}
+      ${monster.damage_vulnerabilities === "" ? ""
+        : `<div class="other_data"> <b>Damage Vulnerabilities:</b> ${monster.damage_vulnerabilities}</div>`}
+      ${monster.damage_resistances === "" ? ""
+        : `<div class="other_data"> <b>Damage Resistances:</b> ${monster.damage_resistances}</div>`}
+      ${monster.damage_immunities === "" ? ""
+        : `<div class="other_data"> <b>Damage Immunities:</b> ${monster.damage_immunities}</div>`}
+      ${monster.condition_immunities === "" ? ""
+        : `<div class="other_data"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
+      ${monster.condition_immunities === "" ? ""
+        : `<div class="other_data"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
+      <div class="other_data"><b>Senses:</b> ${monster.senses}</div>
+      ${monster.langauges === "" ? ""
+        : `<div class="other_data"> <b>Languages:</b> ${monster.languages}</div>`}
+      <div class="other_data"><b>Challenge Rating:</b> ${monster.challenge_rating}</div>
+    </div>
+    <hr>
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));
