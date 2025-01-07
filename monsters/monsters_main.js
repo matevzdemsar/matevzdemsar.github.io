@@ -18,10 +18,9 @@ fromAPI.map((m) => {if (!names.has(m.name)) {
 monsters.map((m) => {if (!!m.legendary_actions && !m.legendary_desc) {
       m.legendary_desc = m.legendary_actions[0].name + ". " + m.legendary_actions[0].desc;
       m.legendary_actions.splice(0, 1);
-}})
-monsters.filter((m) => !m.condition_immunities.includes("fatigue"));
-
-// ToDo: do another map to delete all the monsters that are immune to fatigue.
+    }
+  return m})
+        .filter((m) => !m.condition_immunities.includes("fatigue"));
 
 const filterChoice = {};
 
