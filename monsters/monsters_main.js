@@ -2,7 +2,7 @@ import { monsterFilter } from "./monsterFilter.js";
 import { createFilterBox, showPopup, hidePopup } from "../motherfunctions.js";
 
 const names = new Set();
-const monsters = [];
+let monsters = [];
 const fromAPI = await fetch('./monsters.json')
   .then((response) => {
     if (!response.ok) {
@@ -15,11 +15,12 @@ fromAPI.map((m) => {if (!names.has(m.name)) {
   monsters.push(m);
   names.add(m.name);
     }})
-monsters.map((m) => {if (!!m.legendary_actions && !m.legendary_desc) {
+monsters = monsters.map((m) => {if (!!m.legendary_actions && !m.legendary_desc) {
       m.legendary_desc = m.legendary_actions[0].name + ". " + m.legendary_actions[0].desc;
       m.legendary_actions.splice(0, 1);
     }
-  return m})
+    return m;
+  })
         .filter((m) => !m.condition_immunities.includes("fatigue"));
 
 const filterChoice = {};
