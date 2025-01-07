@@ -308,5 +308,3 @@ export function createFilterBox(filterOptions, filterChoice, display) {
     }
   });
 }
-
-// ToDo: reset the operation filters if the user closes them.
