@@ -11,10 +11,15 @@ const fromAPI = await fetch('./monsters.json')
     return response.json();
   })
 
-fromAPI.map(((m) => {if (!names.has(m.name)) {
+fromAPI.map((m) => {if (!names.has(m.name)) {
   monsters.push(m);
   names.add(m.name);
-}}));
+    }})
+monsters.map((m) => {if (!!m.legendary_actions && !m.legendary_desc) {
+      m.legendary_desc = m.legendary_actions[0].name + ". " + m.legendary_actions[0].desc;
+      m.legendary_actions.splice(0, 1);
+}})
+monsters.filter((m) => !m.condition_immunities.includes("fatigue"));
 
 // ToDo: do another map to delete all the monsters that are immune to fatigue.
 
@@ -146,14 +151,40 @@ function displayMonsters() {
         : `<div class="other_data"> <b>Damage Immunities:</b> ${monster.damage_immunities}</div>`}
       ${monster.condition_immunities === "" ? ""
         : `<div class="other_data"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
-      ${monster.condition_immunities === "" ? ""
-        : `<div class="other_data"> <b>Condition Immunities:</b> ${monster.condition_immunities}</div>`}
-      <div class="other_data"><b>Senses:</b> ${monster.senses}</div>
-      ${monster.langauges === "" ? ""
+      <div class="other_data"> <b>Senses:</b> ${monster.senses}</div>
+      ${monster.languages === "" ? ""
         : `<div class="other_data"> <b>Languages:</b> ${monster.languages}</div>`}
       <div class="other_data"><b>Challenge Rating:</b> ${monster.challenge_rating}</div>
     </div>
     <hr>
+    ${!monster.special_abilities ? "" : `
+      <div class=special_abilities>
+      <b>Special abilities:</b><br> ${monster.special_abilities?.map((sa) =>
+        `<div class="ability"><b><i>${sa.name}:</i></b> ${sa.desc.replaceAll('\n', `<br>`)}</div>`).join("")}
+      </div><hr>
+    `}
+    ${!monster.actions && !monster.bonus_actions && !monster.reactions ? "" : `
+    <div class="regular_actions">
+      ${!monster.actions ? ""
+        : `<b>Actions:</b><br> ${monster.actions?.map((a) =>
+          `<div class="action"> <b><i>${a.name}:</i></b> ${a.desc}</div>`).join("")}`}
+      ${!monster.bonus_actions ? ""
+        : `<b>Bonus actions:</b> ${monster.bonus_actions?.map((a) =>
+          `<div class="action"> <b><i>${a.name}:</i></b> ${a.desc}</div>`).join("")}`}
+      ${!monster.reactions ? ""
+        : `<b>Reactions:</b> ${monster.reactions?.map((a) =>
+          `<div class="action"> <b><i>${a.name}:</i></b> ${a.desc}</div>`).join("")}`}
+    </div><hr>
+    `}
+    ${!monster.legendary_actions ? "" : `
+    <div class="legendary_actions">
+    <b>Legendary actions: </b> ${monster.legendary_desc}
+    ${monster.legendary_actions?.map((la) =>
+      `<div class="legendary_action"> <b><i>${la.name}:</i></b> ${la.desc}</div>`).join("")}
+    </div><hr>
+    `}
+    
+    
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));

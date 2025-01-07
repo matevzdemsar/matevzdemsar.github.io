@@ -20961,10 +20961,6 @@
       {
         "name": "Devour Soul",
         "desc": "The demilich targets one creature within 120 feet  forcing it to make a DC 17 Wisdom saving throw. On a success  or if all the large soul gems on the demilichs skull are occupied  the creature takes 40 necrotic damage  and the demilich regains the same number of hit points. If the target fails its saving throw and there is at least one unoccupied soul gem on the demilichs skull  the demilich regains 40 hit points  and the target dies instantly. Its soul is trapped in a soul gem on the demilichs skull  visible as a tiny  creature-shaped mote of light. While its soul is trapped  a creature can't be restored to life by any means. A soul that remains in a soul gem for 30 days is destroyed forever. If the demilich is defeated and a soul gem crushed  the creature is restored to life if its body is within 100 miles. A creature that succeeds on a saving throw against this effect is immune to it for 24 hours."
-      },
-      {
-        "name": "A demilich mastermind begins combat with up to four empty soul gems",
-        "desc": ""
       }
     ],
     "bonus_actions": null,
