@@ -30,7 +30,7 @@ export function spellFilter (
     ritual = false } = {}) {
         return spells.filter((s) =>
             s.slug.replace("-", " ").includes(name.toLowerCase())
-            &&  (!pclass.length || pclass.every((pc) => s.dnd_class.includes(pc))) // To ni v redu, ker so classi ključi v objectu.
+            &&  (!pclass.length || pclass.some((pc) => s.dnd_class.includes(pc))) // To ni v redu, ker so classi ključi v objectu.
             && (!level.length || level.includes(s.level_int))
             && (!components || s.components.split(', ').every((c) => components.includes(c)))
             && (!casting_time.length || casting_time.includes(s.casting_time))
