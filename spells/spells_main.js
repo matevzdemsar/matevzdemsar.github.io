@@ -1,7 +1,7 @@
 import { spellFilter } from './spellFilter.js';
 import { showPopup, hidePopup, createFilterBox } from '../motherfunctions.js';
 
-const spells = await fetch('./spells.json')
+const fromAPI = await fetch('./new_spells.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load JSON:', response.statusText);
@@ -9,12 +9,48 @@ const spells = await fetch('./spells.json')
     return response.json();
   });
 
+const names = new Set();
+const classes = new Set();
+
+const spells = [];
+
+fromAPI.map((m) => {if (!names.has(m.name)) {
+  spells.push(m);
+  names.add(m.name);
+}})
+
+spells.map((s) => {
+  s.ritual = s.ritual === "yes" ? "Y" : "N";
+  s.concentration = s.concentration === "yes" ? "Y" : "N";
+
+  s.pclasses = s.dnd_class.split(', ');
+  const herald = s.pclasses.indexOf('Herald');
+  if (herald > -1) {s.pclasses.splice(herald, 1)}
+  const empty = s.pclasses.indexOf('');
+  if (empty > -1) {s.pclasses.splice(empty, 1)}
+  const ritual_caster = s.pclasses.indexOf('Ritual Caster');
+  if (ritual_caster > -1) {s.pclasses.splice(ritual_caster, 1)}
+
+  s.pclasses.forEach((x) => classes.add(x));
+  s.dnd_class = s.pclasses.join(', ');
+  
+  // ToDo: Add Ranger and Paladin to dnd_class of spells that can be cast by rangers and paladins.
+  // Because I guess no one else thought of that.
+  //
+  // ToDo: Check if any of the filters still need to be adjusted.
+
+  s.casting_time = s.casting_time.split(', ')[0]
+  return s;
+})
+
+console.log(Array.from(classes));
+
 const filterChoice = {};
 
 const filterOptions = [
   {title: 'Name:', index: 'name', type: 'search'},
   {title: 'Class:', index: 'pclass', type: 'checkbox',
-    options: ['Bard', 'Cleric', 'Druid', 'Sorcerer', 'Warlock','Wizard']},
+    options: Array.from(classes)},
   {title: 'Level:', index: 'level', type: 'checkbox', options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]},
   {title: 'Components:', index: 'components', type: 'checkbox', options: ['V', 'S', 'M']},
   {title: 'Casting time:', index: 'casting_time', type: 'checkbox',
@@ -58,7 +94,7 @@ function displaySpells() {
     const spell_info = document.createElement('div');
     spell_info.classList.add('spell_info');
     spell_info.innerHTML =
-    `Level: ${spell.level}<br>
+    `${spell.level}, ${spell.school.toLowerCase()} <br>
     Casting time: ${spell.casting_time}<br>
     Range: ${spell.range}`;
     div.appendChild(spell_info);
@@ -70,18 +106,18 @@ function displaySpells() {
     popup.innerHTML =
     `<div class="spell_header">
       <div>
-      <h3>${spell.name}</h3> <span class="space"></span> (level ${spell.level})
-      <p>${spell.classes.map((c) => c.name).join(', ')} </p>
+      <h3>${spell.name}</h3> <span class="space"></span> (${spell.level})
+      <p>${spell.dnd_class} </p>
       <p>${spell.concentration === 'Y' ? 'Concentration, ' + spell.duration.toLowerCase() : spell.duration}</p>
       </div>
       <div>
-      <p>Components: ${spell.components.join(', ')} </p>
+      <p>Components: ${spell.components} </p>
       <p>Casting time: ${spell.casting_time} </p>
       <p>Range: ${spell.range} </p>
       </div>
     </div>
     <hr/>
-    <p>${spell.desc.join("<br>").replace(/\*\*\*(.*?)\*\*\*/g, '<br><b>$1</b>')}</p>
+    <p>${spell.desc.replace(/\* \*\*(.*?)\*\*/g, '<br><b>$1</b>')}</p>
 
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');

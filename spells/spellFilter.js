@@ -29,16 +29,16 @@ export function spellFilter (
     concentration = false,
     ritual = false } = {}) {
         return spells.filter((s) =>
-            s.index.replace("-", " ").includes(name.toLowerCase())
-            &&  (!pclass.length || pclass.some((pc) => s.classes.map((c) => c.name).includes(pc))) // To ni v redu, ker so classi ključi v objectu.
-            && (!level.length || level.includes(s.level))
-            && (!components || s.components.every((c) => components.includes(c)))
+            s.slug.replace("-", " ").includes(name.toLowerCase())
+            &&  (!pclass.length || pclass.every((pc) => s.dnd_class.includes(pc))) // To ni v redu, ker so classi ključi v objectu.
+            && (!level.length || level.includes(s.level_int))
+            && (!components || s.components.split(', ').every((c) => components.includes(c)))
             && (!casting_time.length || casting_time.includes(s.casting_time))
             && (!range.length || range.includes(s.range))
             && (!duration.length || duration.some((d) => s.duration.includes(d)))
             && (!concentration || (s.concentration === concentration))
             && (!ritual || (s.ritual === ritual))
-                );
+        );
 }
 
 // Add the option Saving throw / Attack roll / None to the spell filter?
