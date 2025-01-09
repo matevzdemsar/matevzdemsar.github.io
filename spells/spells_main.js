@@ -33,7 +33,7 @@ spells.map((s) => {
 
   s.pclasses.forEach((x) => classes.add(x));
   s.dnd_class = s.pclasses.join(', ');
-  
+
   // ToDo: Add Ranger and Paladin to dnd_class of spells that can be cast by rangers and paladins.
   // Because I guess no one else thought of that.
   //
@@ -42,8 +42,6 @@ spells.map((s) => {
   s.casting_time = s.casting_time.split(', ')[0]
   return s;
 })
-
-console.log(Array.from(classes));
 
 const filterChoice = {};
 
@@ -71,6 +69,13 @@ function displaySpells() {
 
   container.innerHTML = '';
   const filteredSpells = spellFilter(spells, filterChoice);
+  filteredSpells.sort((a, b) => {
+    if (a.level_int !== b.level_int) {
+      return a.level_int - b.level_int;
+    }
+    return a.name.localeCompare(b.name);
+  })
+  console.log(filteredSpells);
 
   const popup = document.getElementById('spell_popup');
   document.addEventListener('keydown', (event) => {
