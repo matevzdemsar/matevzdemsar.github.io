@@ -14,7 +14,6 @@ import { operatorChoice } from "../motherfunctions.js";
  * 
  */
 
-
 export function itemFilter (
     items,
     {name = "",
@@ -24,12 +23,16 @@ export function itemFilter (
     magic = false,
     price = {price: {value: 0, operation: ''}},
     weight = {weight: {value: 0, operation: ''}}} = {}) {
+        const priceConversion = {"cp": 0.01, "sp": 0.1, "gp": 1, "pp": 10,
+            "copper": 0.01, "silver": 0.1, "gold": 1, "platinum": 10};
+        const weightConversion = {"oz": 0.0625, "ounces": 0.0625, "lb": 1, "pounds": 1};
         return items
-            .filter((i) => i.index.includes(name.toLowerCase().replace("-", " "))
-            && (!type.length || type.includes(i.equipment_category.name))
-            && (!rarity.length || rarity.includes(i.rarity))
-            && (!ammunition || (i.ammunition === ammunition))
-            && (!magic || (i.magic === magic))
-            && (operatorChoice(i.weight, Number(weight.weight.value), weight.weight.operation))
-            && (operatorChoice(i.cost, Number(price.price.value), price.price.operation)));
+            .filter((i) => i.name.toLowerCase().includes(name.toLowerCase()))
+            .filter((i) => (!type.length || type.map((t) => (t.toLowerCase())).includes(i.type.toLowerCase())))
+            .filter((i) => (!rarity.length || rarity.map((r) => (r.toLowerCase())).includes(i.rarity.toLowerCase())))
+            .filter((i) => operatorChoice(i.value * priceConversion[i.valueCoin], Number(price.price.value), price.price.operation))
+            .filter((i) => operatorChoice(i.weight * weightConversion[i.weightUnit.toLowerCase()],
+            Number(weight.weight.value, weight.weight.operation)));
+            // .filter((!ammunition || (i.ammunition === ammunition)))
+            // .filter((!magic || (i.magic === magic)))
 }

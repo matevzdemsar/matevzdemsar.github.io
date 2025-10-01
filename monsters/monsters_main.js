@@ -1,27 +1,24 @@
 import { monsterFilter } from "./monsterFilter.js";
 import { createFilterBox, showPopup, hidePopup } from "../motherfunctions.js";
 
-const names = new Set();
-let monsters = [];
+const names = new Set()
+let monsters = []
+
 const fromAPI = await fetch('./monsters.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load JSON:', response.statusText);
-    }
+    };
     return response.json();
-  })
+  });
 
-fromAPI.map((m) => {if (!names.has(m.name)) {
+Object.values(fromAPI).map((m) => {if (!names.has(m.name)) {
   monsters.push(m);
   names.add(m.name);
-    }})
-monsters = monsters.map((m) => {if (!!m.legendary_actions && !m.legendary_desc) {
-      m.legendary_desc = m.legendary_actions[0].name + ". " + m.legendary_actions[0].desc;
-      m.legendary_actions.splice(0, 1);
-    }
-    return m;
-  })
-        .filter((m) => !m.condition_immunities.includes("fatigue"));
+  }}
+  );
+
+console.log(monsters.length)
 
 const filterChoice = {};
 
@@ -72,8 +69,6 @@ const filterOptions = [
     {category: 'charisma', c_name: 'CHA:'}]}
 ];
 
-const modifiers = ["-5", "-4", "-3", "-2", "-1", "0", "+1", "+2", "+3", "+4",
-  "+5", "+6", "+7", "+8", "+9", "+10"]
 
 function displayMonsters() {
   container.innerHTML = '';
@@ -95,7 +90,7 @@ function displayMonsters() {
   const div = document.createElement('div');
   div.classList.add('monster')
   div.innerHTML = `<b>${monster.name}</b> <br>
-   <i>${monster.type} CR: ${monster.challenge_rating}<i>`;
+   <i>${monster.type} CR: ${monster.cr}<i>`;
 
   
   div.addEventListener('click', () => {
@@ -109,25 +104,25 @@ function displayMonsters() {
     <div class="basic_info">
       <div class="image_container">
         <img src=../assets/shield.jpg alt="Shield" width=37.5px>
-        <div class="basic_data"> ${monster.armor_class} </div>
+        <div class="basic_data"> ${monster.ac} </div>
       </div>
       <div class="image_container">
         <img src=../assets/heart.jpg alt="Heart" width=51px class="gray">
-        <div class="basic_data"> ${monster.hit_points} </div>
+        <div class="basic_data"> ${monster.hp} </div>
       </div>
       <div class="image_container">
         <img src=../assets/d20.jpg alt="d20" width=43.5px class="gray">
-        <div class="basic_data"> ${monster.challenge_rating} </div>
+        <div class="basic_data"> ${monster.cr} </div>
       </div>
     </div>
     <hr>
     <div class="ability_scores">
-      <div class="score"> STR <br> ${monster.strength} (${modifiers[Math.floor(monster.strength / 2)]}) </div>
-      <div class="score"> DEX <br> ${monster.dexterity} (${modifiers[Math.floor(monster.dexterity / 2)]}) </div>
-      <div class="score"> CON <br> ${monster.constitution} (${modifiers[Math.floor(monster.constitution / 2)]}) </div>
-      <div class="score"> INT <br> ${monster.intelligence} (${modifiers[Math.floor(monster.intelligence / 2)]}) </div>
-      <div class="score"> WIS <br> ${monster.wisdom} (${modifiers[Math.floor(monster.wisdom / 2)]}) </div>
-      <div class="score"> CHA <br> ${monster.charisma} (${modifiers[Math.floor(monster.charisma / 2)]}) </div>
+      <div class="score"> STR <br> ${monster.str} (${Math.floor((monster.str - 10) / 2)}) </div>
+      <div class="score"> DEX <br> ${monster.dex} (${Math.floor((monster.dex - 10) / 2)}) </div>
+      <div class="score"> CON <br> ${monster.con} (${Math.floor((monster.con - 10) / 2)}) </div>
+      <div class="score"> INT <br> ${monster.int} (${Math.floor((monster.int - 10) / 2)}) </div>
+      <div class="score"> WIS <br> ${monster.wis} (${Math.floor((monster.wis - 10) / 2)}) </div>
+      <div class="score"> CHA <br> ${monster.cha} (${Math.floor((monster.cha - 10) / 2)}) </div>
     </div>
     <hr>
     <div class="other_info">
@@ -188,10 +183,10 @@ function displayMonsters() {
     <button id="close-popup">Close</button>`;
     const closeButton = document.getElementById('close-popup');
     closeButton.addEventListener('click', () => hidePopup(popup));
-})
+});
 container.appendChild(div);
-})
-}
+});
+};
 
 createFilterBox(filterOptions, filterChoice, displayMonsters);
 displayMonsters();

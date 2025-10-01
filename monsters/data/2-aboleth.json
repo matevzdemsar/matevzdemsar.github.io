@@ -1,0 +1,70 @@
+{
+  "id": "aboleth",
+  "_index": 2,
+  "name": "Aboleth",
+  "abilityScores": {
+    "STR": {
+      "score": 21,
+      "mod": 5,
+      "ability": "STR"
+    },
+    "DEX": {
+      "score": 9,
+      "mod": -1,
+      "ability": "DEX"
+    },
+    "CON": {
+      "score": 15,
+      "mod": 2,
+      "ability": "CON"
+    },
+    "INT": {
+      "score": 18,
+      "mod": 4,
+      "ability": "INT"
+    },
+    "WIS": {
+      "score": 15,
+      "mod": 2,
+      "ability": "WIS"
+    },
+    "CHA": {
+      "score": 18,
+      "mod": 4,
+      "ability": "CHA"
+    }
+  },
+  "alignment": "LAWFUL_EVIL",
+  "armorClass": "17 (natural armor)",
+  "challengeRating": "10 (5,900 XP)",
+  "hitPoints": {
+    "average": 135,
+    "roll": "18d10+36"
+  },
+  "race": "ABERRATION",
+  "size": "Large aberration",
+  "speed": "10 ft., swim 40 ft.",
+  "senses": "darkvision 120 ft.",
+  "source": "monster-manual",
+  "languages": ["Deep Speech", "telepathy 120 ft."],
+  "skills": ["History +12", "Perception +10"],
+  "savingThrows": ["Con +6", "Int +8", "Wis +6"],
+  "abilities": [
+    {
+      "name": "Amphibious.",
+      "description": "The aboleth can breathe air and water.",
+      "recharge": null
+    },
+    {
+      "name": "Mucous Cloud.",
+      "description": "While underwater, the aboleth is surrounded by transformative mucus. A creature that touches the aboleth or that hits it with a melee attack while within 5 ft. of it must make a DC 14 Constitution saving throw. On a failure, the creature is diseased for 1d4 hours. The diseased creature can breathe only underwater.",
+      "recharge": null
+    },
+    {
+      "name": "Probing Telepathy.",
+      "description": "If a creature communicates telepathically with the aboleth, the aboleth learns the creature's greatest desires if the aboleth can see the creature.",
+      "recharge": null
+    }
+  ],
+  "image": "https://raw.githubusercontent.com/theoperatore/dnd-monster-api/master/src/db/assets/aboleth.jpg"
+}

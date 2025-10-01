@@ -1,7 +1,7 @@
 import { itemFilter } from './itemFilter.js';
 import { showPopup, hidePopup, createFilterBox } from '../motherfunctions.js';
 
-const items = await fetch('./items.json')
+const fromAPI = await fetch('./items.json')
   .then((response) => {
     if (!response.ok) {
       throw new Error('Failed to load JSON:', response.statusText);
@@ -9,16 +9,30 @@ const items = await fetch('./items.json')
     return response.json();
   });
 
+const items = Object.values(fromAPI);
+
+// const tmp = new Set();
+// items.forEach((i) => tmp.add(i.weightUnit.toLowerCase()));
+// console.log(tmp);
+//
+// Temporary code to help set up filters, delete afterwards
+
 const filterChoice = {}
 
 const filterOptions = [
   {title: 'Name', index: 'name', type: 'search'},
   {title: 'Type', index: 'type', type: 'checkbox',
-    options: ['Adventuring Gear', 'Tools', 'Mounts and Vehicles', 'Weapon', 'Armor']},
-  {title: 'Price', index: 'price', type: 'operator',
+    options: ['Ammunition', 'Adventuring gear', 'Armor', "Artisan's tools", 'Explosive',
+    'Food & Drink', 'Gaming Set', 'Instrument', 'Mount', 'Poison', 'Ring', 'Rod',
+    'Spellcasting Focus', 'Scroll', 'Staff', 'Tack & Harness', 'Tool', 'Trade Good',
+    'Vehicle (Air)', 'Vehicle (Land)', 'Vehicle (Space)', 'Vehicle (Water)',
+    'Wand', 'Weapon', 'Wondrous']},
+  {title: 'Rarity', index: 'rarity', type: 'checkbox',
+    options: ['Common', 'Uncommon', 'Rare', 'Very Rare', 'Legendary', 'Artifact', 'Unknown']},
+  {title: 'Price (gp)', index: 'price', type: 'operator',
     options: [{category: 'price', c_name: ''}]},
   {title: 'Weight', index: 'weight', type: 'operator',
-    options: [{category: 'weight', cname: ''}]}
+    options: [{category: 'weight', c_name: ''}]}
 ];
 
 function displayItems() {

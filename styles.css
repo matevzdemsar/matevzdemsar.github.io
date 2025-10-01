@@ -160,3 +160,32 @@
     margin-left: 10px;
     margin-top: 5px;
 }
+
+.background {
+    width: 30%;
+    border: 1px solid black;
+    margin: 10px;
+    border-radius: 5px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.background:hover {
+  background-color: rgb(244, 244, 244);
+  transform: translateX(5%);
+  transition: transform 0.2s ease-in-out;
+}
+
+.background_popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--popup-width);
+    height: 100%;
+    border: 1px solid black;
+    padding: 20px;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
