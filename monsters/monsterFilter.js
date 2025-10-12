@@ -1,5 +1,10 @@
 import { operatorChoice } from "../motherfunctions.js"
 
+String.prototype.toTitle = function () {
+  if (!this.length) return this;
+  return this.charAt(0).toUpperCase() + this.slice(1);
+}
+
 /**
  * 
  * @param {monster[]} monsters 
@@ -61,17 +66,14 @@ export function monsterFilter (
 } = {}) {
 return monsters
     .filter((m) => (!name || m.name.toLowerCase().includes(name.toLowerCase())))
-    .filter((m) => (!type.length || type.includes(m.type)))
+    .filter((m) => (!type.length || type.includes(m.race.toLowerCase().toTitle())))
     .filter((m) => (!challenge_rating.length || challenge_rating.includes(m.cr)))
     .filter((m) => (operatorChoice(m.ac, Number(armor_class.armor_class.value),
       armor_class.armor_class.operation)))
     .filter((m) => (operatorChoice(m.hitPoints.average, Number(hit_points.hit_points.value),
       hit_points.hit_points.operation)))
-    // .filter((m) => (Object.keys(speed).every((key) => {
-    //   let m_speed = 0;
-    //   if (Object.keys(m).includes(monster_speed[key])) {m_speed = m[monster_speed[key]]};
-    //   return operatorChoice(m_speed, Number(speed[key].value), speed[key].operation);
-    //   })))
+    .filter((m) => (Object.keys(speed).every((key) => (
+      operatorChoice(m.speed[key], Number(speed[key].value), speed[key].operation)))))
     .filter((m) => (!damage_vulnerabilities || damage_vulnerabilities.every((v) =>
      !!m.vulnerabilities && m.vulnerabilities.includes(v.toLowerCase()))))
     .filter((m) => (!damage_resistances || damage_resistances.every((r) =>
