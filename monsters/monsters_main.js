@@ -9,36 +9,35 @@ const fromAPI = await fetch('./monsters.json')
     return response.json();
   });
 
-  const monsters = fromAPI.map((m) => {
-    let walk = 0;
-    let swim = 0;
-    let fly = 0;
-    let climb = 0;
-    let burrow = 0;
-    m.speed.split(", ").forEach((str) => {
-        let num = "";
-        str.split("").forEach((char) => {
-            if ("1234567890".includes(char)) {
-                num += char
-            };
-        });
-        if (str.includes("swim")) {swim = Number(num)} else
-        if (str.includes("fly")) {fly = Number(num)} else
-        if (str.includes("climb")) {climb = Number(num)} else
-        if (str.includes("burrow")) {burrow = Number(num)} else
-        {walk = Number(num)}
-    });
-    return {
-    ...m,
-    speed: {
-        "walk": walk,
-        "swim": swim,
-        "fly": fly,
-        "climb": climb,
-        "burrow": burrow
-    }
-    }}
-).map((m) => ({
+const monsters = fromAPI.map((m) => {
+  let walk = 0;
+  let swim = 0;
+  let fly = 0;
+  let climb = 0;
+  let burrow = 0;
+  m.speed.split(", ").forEach((str) => {
+      let num = "";
+      str.split("").forEach((char) => {
+          if ("1234567890".includes(char)) {
+              num += char
+          };
+      });
+      if (str.includes("swim")) {swim = Number(num)} else
+      if (str.includes("fly")) {fly = Number(num)} else
+      if (str.includes("climb")) {climb = Number(num)} else
+      if (str.includes("burrow")) {burrow = Number(num)} else
+      {walk = Number(num)}
+  });
+  return {
+  ...m,
+  speed: {
+      "walk": walk,
+      "swim": swim,
+      "fly": fly,
+      "climb": climb,
+      "burrow": burrow
+  }
+}}).map((m) => ({
     ...m,
     ac: Number(m.armorClass.split(" ")[0])
 })).map((m) => ({
