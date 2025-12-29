@@ -99,7 +99,6 @@ String.prototype.toTitle = function () {
 }
 
 export function createFilterBox(filterOptions, filterChoice, display) {
-  console.log("Creating Filter Box")
   const filterBox = document.getElementById("filterBox");
 
   filterOptions.forEach((filter, index) => {

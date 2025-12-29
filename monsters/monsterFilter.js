@@ -68,7 +68,7 @@ console.log(challenge_rating)
 return monsters
     .filter((m) => (!name || m.name.toLowerCase().includes(name.toLowerCase())))
     .filter((m) => (!type.length || type.includes(m.race.toLowerCase().toTitle())))
-    .filter((m) => (!challenge_rating.length || challenge_rating.includes(m.challengeRating.split(" ")[0])))
+    .filter((m) => (!challenge_rating.length || challenge_rating.includes(Number(m.challengeRating.split(" ")[0]))))
     .filter((m) => (operatorChoice(m.ac, Number(armor_class.armor_class.value),
       armor_class.armor_class.operation)))
     .filter((m) => (operatorChoice(m.hitPoints.average, Number(hit_points.hit_points.value),
